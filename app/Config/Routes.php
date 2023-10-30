@@ -2,6 +2,8 @@
 
 use CodeIgniter\Router\RouteCollection;
 use App\Controllers\AdminController;
+use App\Controllers\KasirController;
+
 
 
 /**
@@ -9,3 +11,4 @@ use App\Controllers\AdminController;
  */
 $routes->get('/', 'Home::index');
 $routes -> get('/dashboard_admin', [AdminController::class, 'index']);
+$routes -> get('/dashboard_kasir', [KasirController::class, 'index']);
