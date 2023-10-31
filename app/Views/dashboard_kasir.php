@@ -20,7 +20,7 @@
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
-                            <img src="<?= base_url("assets/img/logo.png")?>" alt="homepage" />
+                            <img src="<?= base_url("assets/img/logonew.png")?>" alt="homepage" style="height:50px;/>
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
@@ -48,11 +48,10 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li>
-                        
-                            <span class="text-white font-medium">Kasir</span></a>
-                        
+                        <a class="profile-pic" href="#">
+                                <img src="<?= base_url("assets/img/varun.jpg")?>" alt="user-img" width="36"
+                                    class="img-circle"><span class="text-white font-medium">Kasir</span></a>
                         </li>
-                        
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -135,7 +134,7 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
+            <div class="container-fluid" style="background-image: url('./assets/img/bg.png')">
                 <!-- ============================================================== -->
                 <!-- Three charts -->
                 <!-- ============================================================== -->
