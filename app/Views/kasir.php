@@ -175,7 +175,7 @@
                                             <td>3</td>
                                             <td class="txt-oflo">Rafa</td>
                                             <td class="txt-oflo">22</td>
-                                            <td class="txt-oflo">256</td>
+                                            <td class="txt-oflo">2</td>
                                             <td><button type="submit" class="tomboledit">Edit</button>
                                             <button type="submit" class="tombolapus">Hapus</button></td>
                                         </tr>
