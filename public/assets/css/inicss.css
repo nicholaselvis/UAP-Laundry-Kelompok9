@@ -1,0 +1,27 @@
+.tombol {
+    background-color: #3498db; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 10px 20px; /* Padding (ruang dalam tombol) */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Membuat sudut tombol agak melengkung */
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat tombol dihover */
+}
+
+.tomboledit {
+    background-color: #a2ca00; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 10px 20px; /* Padding (ruang dalam tombol) */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Membuat sudut tombol agak melengkung */
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat tombol dihover */
+}
+
+.tombolapus {
+    background-color: #ff0000; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 10px 20px; /* Padding (ruang dalam tombol) */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Membuat sudut tombol agak melengkung */
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat tombol dihover */
+}
+

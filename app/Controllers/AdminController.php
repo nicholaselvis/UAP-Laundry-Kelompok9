@@ -10,4 +10,14 @@ class AdminController extends BaseController
     {
         return view('dashboard_admin');
     }
+
+    public function stok()
+    {
+        return view('stok');
+    }
+
+    public function kasir()
+    {
+        return view('kasir');
+    }
 }

@@ -9,3 +9,5 @@ use App\Controllers\AdminController;
  */
 $routes->get('/', 'Home::index');
 $routes -> get('/dashboard_admin', [AdminController::class, 'index']);
+$routes -> get('/stok', [AdminController::class, 'stok']);
+$routes -> get('/kasir', [AdminController::class, 'kasir']);
