@@ -120,7 +120,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
+                        <h4 class="page-title">Absensi Kasir</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                     </div>
@@ -143,146 +143,65 @@
                 <!-- ============================================================== -->
                 <!-- RECENT SALES -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12"></div>
-                        <div class="white-box">
-                            <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Booking Pesanan</h3>
-                            </div>
-                            <div class="table-responsive" >
-                            <div style="display: inline-block;" >
-                                <b>
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 1</td>
-                                </table>
-                                <table border="3" cellpadding="51" bgcolor="#2cabe3">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 2</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 3</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 4</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33" >
-                                    <td> Mesin Cuci 5</td>
-                                </table>
-                                <table border="3" cellpadding="51" bgcolor="#2cabe3">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 6</td>
-                                </table>
-                                <table border="3" cellpadding="51" >
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 7</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 8</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-                                </b>                                    
-                                </table>
-                            </div>
-                        </div>
+            <div class="white-box">
+                <table border="2" cellpadding="10">
+                <form>
+                    <tr>
+                    <td><label for="fname">Nama Lengkap :</label>
+                    <input type="text" id="fname" name="fname"><br></td>
+                    <td><label for="lname">Tanggal Kehadiran :</label>
+                    <input type="date" id="lname" name="tanggal"><br></td>
+                    <td><label for="lname">Waktu Kehadiran :</label>
+                    <input type="time" id="lname" name="jam"><br></td>
+                    <td><label for="lname">Bukti Kehadiran :</label>
+                    <input type="file" name="foto"><br></td>
+                    </tr>
+                    </table><br>
+                    <td><button type ="submit">Submit</button></td>
+                </form>
+                
+            </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                             <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Transaksi Hari Ini</h3>
+                                <h3 class="box-title mb-0">Riwayat Absensi</h3>
                             </div>
                             <div class="table-responsive">
                                 <table class="table no-wrap">
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">No.</th>
-                                            <th class="border-top-0">Nama</th>
+                                            <th class="border-top-0">Nama Lengkap</th>
                                             
-                                            <th class="border-top-0">Berat Cucian (Kg)</th>
-                                            <th class="border-top-0">Lainnya</th>
-                                            <th class="border-top-0">Harga</th>
+                                            <th class="border-top-0">Tanggal Kehadiran</th>
+                                            <th class="border-top-0">Waktu Kehadiran</th>
+                                            <th class="border-top-0">Bukti Kehadiran</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td class="txt-oflo">Estes</td>
+                                            <td class="txt-oflo">Zahra</td>
                                             
-                                            <td class="txt-oflo">3 </td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-success">36.000</span></td>
+                                            <td class="txt-oflo">01/11/2023 </td>
+                                            <td class="txt-oflo">07.30 </td>
+                                            <td><span class="text-success">-</span></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td class="txt-oflo">Layla</td>
+                                            <td class="txt-oflo">Zahra</td>
                                             
-                                            <td class="txt-oflo">4,5</td>
-                                            <td class="txt-oflo">- </td>
-                                            <td><span class="text-info">45.000</span></td>
+                                            <td class="txt-oflo">02/11/2023</td>
+                                            <td class="txt-oflo">14.00 </td>
+                                            <td><span class="text-info">-</span></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td class="txt-oflo">Rafaela</td>
-                                            <td class="txt-oflo">2</td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-info">32.000</span></td>
+                                            <td class="txt-oflo">Zahra</td>
+                                            <td class="txt-oflo">03/11/2023</td>
+                                            <td class="txt-oflo">07.30 </td>
+                                            <td><span class="text-info">-</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
