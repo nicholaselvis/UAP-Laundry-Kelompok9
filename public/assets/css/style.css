@@ -3887,7 +3887,10 @@ input[type="button"].btn-block {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+     }
+  
+    
 
 .navbar-brand {
   display: inline-block;

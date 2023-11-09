@@ -119,13 +119,12 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
-                    </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <h4 class="page-title">Daftar Kasir</h4>
                         
                     </div>
+                    
                 </div>
-                <!-- /.col-lg-12 -->
+                
             </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
@@ -135,36 +134,14 @@
             <!-- ============================================================== -->
             <div class="container-fluid" style="background-image: url('./assets/img/bg.png')">
                 <!-- ============================================================== -->
-                <!-- Three charts -->
-                <!-- ============================================================== -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Karyawan</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0"> 
-                                <span class="counter text-success">3</span>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Transaksi</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <span class="counter text-purple">50</span>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <!-- ============================================================== -->
                 <!-- RECENT SALES -->
                 <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
-                            <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Histori Transaksi</h3>
+                        <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Kasir</h3>
+                                
                             </div>
                             <div class="table-responsive">
                                 <table class="table no-wrap">
@@ -172,40 +149,40 @@
                                         <tr>
                                             <th class="border-top-0">#</th>
                                             <th class="border-top-0">Nama</th>
-                                            
-                                            <th class="border-top-0">Berat Cucian (Kg)</th>
-                                            <th class="border-top-0">Lainnya</th>
-                                            <th class="border-top-0">Harga</th>
+                                            <th class="border-top-0">Umur</th>
+                                            <th class="border-top-0">PIN</th>
+                                            <th class="border-top-0">Aksi</th>
                                         </tr>
                                     </thead>
-
                                     <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td class="txt-oflo">Estes</td>
-                                            
-                                            <td class="txt-oflo">3 </td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-success">36.000</span></td>
+                                            <td class="txt-oflo">20</td>
+                                            <td class="txt-oflo">123</td>
+                                            <td><button type="submit" class="tomboledit">Edit</button>
+                                            <button type="submit" class="tombolapus">Hapus</button></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td class="txt-oflo">Layla</td>
-                                            
-                                            <td class="txt-oflo">4,5</td>
-                                            <td class="txt-oflo">- </td>
-                                            <td><span class="text-info">45.000</span></td>
+                                            <td class="txt-oflo">Lesti</td>
+                                            <td class="txt-oflo">19</td>
+                                            <td class="txt-oflo">233</td>
+                                            <td><button type="submit" class="tomboledit">Edit</button>
+                                            <button type="submit" class="tombolapus">Hapus</button></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td class="txt-oflo">Rafaela</td>
+                                            <td class="txt-oflo">Rafa</td>
+                                            <td class="txt-oflo">22</td>
                                             <td class="txt-oflo">2</td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-info">32.000</span></td>
+                                            <td><button type="submit" class="tomboledit">Edit</button>
+                                            <button type="submit" class="tombolapus">Hapus</button></td>
                                         </tr>
                                     </tbody>
 
                                 </table>
+                                <button type="submit" class="tombol">Tambah</button>
                             </div>
                         </div>
                     </div>
