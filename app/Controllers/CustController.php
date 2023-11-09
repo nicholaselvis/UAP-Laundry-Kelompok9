@@ -10,4 +10,8 @@ class CustController extends BaseController
     {
         return view('dashboard_cust');
     }
+
+    public function riwayat(){
+        return view('riwayat_cust');
+    }
 }
