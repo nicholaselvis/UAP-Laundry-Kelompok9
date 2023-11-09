@@ -120,8 +120,8 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
-                    </div>
+                        <h4 class="page-title">Riwayat Transaksi</h4>
+                        <input type="date" id="lname" name="tanggal"><br></td>                    </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                     </div>
                 </div>
@@ -143,121 +143,22 @@
                 <!-- ============================================================== -->
                 <!-- RECENT SALES -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12"></div>
-                        <div class="white-box">
-                            <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Booking Pesanan</h3>
-                            </div>
-                            <div class="table-responsive" >
-                            <div style="display: inline-block;" >
-                                <b>
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 1</td>
-                                </table>
-                                <table border="3" cellpadding="51" bgcolor="#2cabe3">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 2</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 3</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 4</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33" >
-                                    <td> Mesin Cuci 5</td>
-                                </table>
-                                <table border="3" cellpadding="51" bgcolor="#2cabe3">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 6</td>
-                                </table>
-                                <table border="3" cellpadding="51" >
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 7</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 8</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
-                            </div>
-                                </b>                                    
-                                </table>
-                            </div>
-                        </div>
-                <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                             <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Transaksi Hari Ini</h3>
+                                <h3 class="box-title mb-0">Riwayat Transaksi Penjualan</h3>
                             </div>
                             <div class="table-responsive">
                                 <table class="table no-wrap">
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">No.</th>
-                                            <th class="border-top-0">Nama</th>
-                                            
-                                            <th class="border-top-0">Berat Cucian (Kg)</th>
-                                            <th class="border-top-0">Lainnya</th>
+                                            <th class="border-top-0">Nama</th>      
+                                            <th class="border-top-0">Jenis Paket</th>
+                                            <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
+                                            <th class="border-top-0">Status</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -283,6 +184,13 @@
                                             <td class="txt-oflo">2</td>
                                             <td class="txt-oflo">Detergen </td>
                                             <td><span class="text-info">32.000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Transaksi</th>
+                                            <th>3</th>
+                                            <th>9,5</th>
+                                            <th>-</th>
+                                            <th>111.000</th>
                                         </tr>
                                     </tbody>
                                 </table>
