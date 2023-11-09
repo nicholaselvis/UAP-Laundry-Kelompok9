@@ -11,6 +11,7 @@ class AdminController extends BaseController
         return view('dashboard_admin');
     }
 
+
     public function stok()
     {
         return view('stok');
@@ -21,3 +22,6 @@ class AdminController extends BaseController
         return view('kasir');
     }
 }
+
+}
+
