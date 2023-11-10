@@ -157,7 +157,7 @@
                                             <th class="border-top-0">Jenis Paket</th>
                                             <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
-                                            <th class="border-top-0">Status</th>
+                                            <th class="border-top-0">Status </th>
 
                                         </tr>
                                     </thead>

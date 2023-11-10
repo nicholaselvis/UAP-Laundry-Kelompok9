@@ -10,4 +10,13 @@ class AbsensiController extends BaseController
     {
         return view("absensi_kasir");
     }
+    public function store()
+    {
+        $data =[
+            'nama' => $this->request->getVar('nama'),
+            'tanggal' => $this->request->getVar('tanggal'),
+            'jam' => $this->request->getVar('jam'),
+        ];     
+        return view("absensi_kasir", $data);
+    }
 }

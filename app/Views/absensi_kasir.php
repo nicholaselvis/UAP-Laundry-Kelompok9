@@ -145,10 +145,10 @@
                 <!-- ============================================================== -->
             <div class="white-box">
                 <table border="2" cellpadding="10">
-                <form>
+                <form action="<?= base_url('/kasir/store') ?>" method="POST">
                     <tr>
                     <td><label for="fname">Nama Lengkap :</label>
-                    <input type="text" id="fname" name="fname"><br></td>
+                    <input type="text" id="fname" name="nama"><br></td>
                     <td><label for="lname">Tanggal Kehadiran :</label>
                     <input type="date" id="lname" name="tanggal"><br></td>
                     <td><label for="lname">Waktu Kehadiran :</label>
