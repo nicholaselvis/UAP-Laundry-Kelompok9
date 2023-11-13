@@ -35,36 +35,23 @@
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
                         ></a>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
+                
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
                    
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
+                    
                     <ul class="navbar-nav ms-auto d-flex align-items-center">                        
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
+                        
                         <li>
                         <a class="profile-pic" href="#">
                                 <img src="<?= base_url("assets/img/varun.jpg")?>" alt="user-img" width="36"
                                     class="img-circle"><span class="text-white font-medium">Kasir</span></a>
                         </li>
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
+                      
                     </ul>
                 </div>
             </nav>
         </header>
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+      
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -103,20 +90,11 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- End Sidebar navigation -->
             </div>
-            <!-- End Sidebar scroll-->
         </aside>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
+       
         <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
+            
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -125,24 +103,10 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                     </div>
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
             
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
+            
             <div class="container-fluid" style="background-image: url('./assets/img/bg.png')">
-                <!-- ============================================================== -->
-                <!-- Three charts -->
-                <!-- ============================================================== -->
-                
-                
-                <!-- ============================================================== -->
-                <!-- RECENT SALES -->
-                <!-- ============================================================== -->
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                             <div class="d-md-flex mb-3">
@@ -168,7 +132,8 @@
                                             
                                             <td class="txt-oflo">3 </td>
                                             <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-success">36.000</span></td>
+                                            <td><span class="text-oflo">36.000</span></td>
+                                            <td><span class="text-success">Selesai</span></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -176,14 +141,16 @@
                                             
                                             <td class="txt-oflo">4,5</td>
                                             <td class="txt-oflo">- </td>
-                                            <td><span class="text-info">45.000</span></td>
+                                            <td><span class="text-oflo">45.000</span></td>
+                                            <td><span class="text-oflo">Pending</span></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
                                             <td class="txt-oflo">Rafaela</td>
                                             <td class="txt-oflo">2</td>
                                             <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-info">32.000</span></td>
+                                            <td><span class="text-oflo">32.000</span></td>
+                                            <td><span class="text-oflo">Pending</span></td>
                                         </tr>
                                         <tr>
                                             <th>Total Transaksi</th>
@@ -191,6 +158,7 @@
                                             <th>9,5</th>
                                             <th>-</th>
                                             <th>111.000</th>
+                                            <th>-</th>
                                         </tr>
                                     </tbody>
                                 </table>
