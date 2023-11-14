@@ -104,8 +104,6 @@
                     </div>
                 </div>
             </div>
-            
-            
             <div class="container-fluid" style="background-image: url('./assets/img/bg.png')">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
@@ -122,7 +120,6 @@
                                             <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
                                             <th class="border-top-0">Status </th>
-
                                         </tr>
                                     </thead>
                                     <tbody>

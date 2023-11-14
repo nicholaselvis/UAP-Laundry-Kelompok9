@@ -18,5 +18,8 @@ $routes -> get('/dashboard_admin', [AdminController::class, 'index']);
 $routes -> get('/stok', [AdminController::class, 'stok']);
 $routes -> get('/kasir', [AdminController::class, 'kasir']);
 $routes -> get('/dashboard_kasir', [KasirController::class, 'index']);
-$routes -> get('/absensi_kasir', [AbsensiController::class, 'index']);
+$routes -> get('/absensi_kasir', [AbsensiController::class, 'show']);
 $routes -> get('/riwayat_transaksi', [RiwayatController::class, 'index']);
+$routes -> post('/absensi/store', [AbsensiController::class, 'store']);
+$routes->get('/dashboard_kasir', [AbsensiController::class, 'dashboard_kasir']);
+
