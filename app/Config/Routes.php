@@ -23,7 +23,6 @@ $routes -> get('/absensi_kasir', [AbsensiController::class, 'index']);
 $routes -> get('/riwayat_transaksi', [RiwayatController::class, 'index']);
 
 $routes -> get('/dashboard_cust', [CustController::class, 'index']);
-
 $routes -> get('/riwayat_cust', [CustController::class, 'riwayat']);
-
-
+$routes -> get('/form1_cust', [CustController::class, 'form1']);
+$routes -> get('/form2_cust', [CustController::class, 'form2']);
