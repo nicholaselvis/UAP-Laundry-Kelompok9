@@ -23,6 +23,7 @@ class AdminController extends BaseController
         return view('dashboard_admin');
     }
 
+
     public function stok()
     {
         $stokModel = new StokModel();
@@ -42,7 +43,6 @@ class AdminController extends BaseController
     {
         return view('kasir');
     }
-
     public function create_stok()
     {
         $stok = $this->stokModel->getStok();
@@ -70,4 +70,3 @@ class AdminController extends BaseController
         return redirect()->to('/admin/stok');
     }
 }
-
