@@ -52,27 +52,30 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <!-- User Profile-->
-                    <a href="<?= base_url('dashboard_kasir.php')?>">
+                    <li class="sidebar-item">
+                        <a href="<?= base_url('/dashboard_kasir')?>">
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
                             <i class="fa fa-table" aria-hidden="true"></i>
                             <span class="hide-menu">Dashboard</span>
                         </a>
                     </a>
-                    </li>
+                        </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <span class="hide-menu">Absensi</span>
-                        </a>
-                    </li>
+                            <a href="<?=base_url('/absensi_kasir')?>" class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                                aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="hide-menu">Absensi</span>
+                            </a>
+                        </li>
 
                     <li class="sidebar-item pt-2">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
-                            <i class="far fa-clock" aria-hidden="true"></i>
-                            <span class="hide-menu">Riwayat Transaksi</span>
-                        </a>
-                    </li>
+                            <a href="<?=base_url('/riwayat_transaksi')?>" class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                                aria-expanded="false">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Riwayat Transaksi</span>
+                            </a>
+                        </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
                             <i class="fa fa-globe" aria-hidden="true"></i>
