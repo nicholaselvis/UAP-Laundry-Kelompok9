@@ -1,7 +1,6 @@
 <?= $this->extend('layouts/app') ?>
 
 <?= $this->section('content') ?>
-<?php $id = 1; ?>
 
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
@@ -74,7 +73,7 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
@@ -145,35 +144,16 @@
                                 
                             </div>
                             <div class="table-responsive">
-                                <table class="table no-wrap">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-top-0">ID</th>
-                                            <th class="border-top-0">Barang</th>
-                                            <th class="border-top-0">Stok</th>
-                                            <th class="border-top-0">Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php
-                                        foreach ($stok as $stok){
-                                    ?>
-                                        <tr>
-                                            <td><?= $id++ ?></td>
-                                            <td class="txt-oflo"><?= $stok['nama_barang'] ?></td>
-                                            <td class="txt-oflo"><?= $stok['jumlah'] ?></td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                    </tbody>
-
-                                </table>
-                                <a href="<?= base_url('/admin/create_stok')?>">
-                                <button type="submit" class="tombol">Tambah</button>
-                                </a>
+                                <form action="<?= base_url('/admin/store')?>" method="POST">
+                                    <label for="">Nama Barang : </label>
+                                        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" type="text" name="nama barang" id="" style="width: 20%" value="<?= old('nama_barang') ?>">
+                                        <br>  
+                                    
+                                    <label for="">Jumlah : </label>
+                                        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" type="text" name="jumlah" id="" style="width: 20%" value="<?= old('jumlah') ?>">
+                                        <br>        
+                                        <button type="submit" class="tombol">Tambah</button>
+                                </form>
                             </div>
                         </div>
                     </div>
