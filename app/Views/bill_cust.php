@@ -94,11 +94,11 @@ padding-bottom: 10px;">
                         if($data['kapasitas_pesanan']==2)$cap = "3-5";
                     ?>
                     <td>Kapasitas Pesanan</td>
-                    <td><input type="text" name="id_jenis_layanan" value="<?=$cap?>" readonly/> Kg</td>
+                    <td><input type="text" name="id_jenis_layanan" value="<?=$cap?>Kg" readonly/></td>
                 </tr>
                 <tr>
                     <td>Total Transaksi</td>
-                    <td>Rp<input type="text" name="id_jenis_layanan" value="<?= number_format($data['total_transaksi'],0,'.','.');?>" readonly/></td>
+                    <td><input type="text" name="id_jenis_layanan" value="Rp<?= number_format($data['total_transaksi'],0,'.','.');?>" readonly/></td>
                 </tr>
             </tbody>
             </table>

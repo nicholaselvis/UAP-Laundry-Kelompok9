@@ -73,7 +73,7 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../dashboard_kasir"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
@@ -88,7 +88,7 @@
                         </li>
                         
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="javascript:;"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat Transaksi</span>
@@ -154,6 +154,7 @@
                                         <tr>
                                             <th class="border-top-0">No.</th>
                                             <th class="border-top-0">ID Transaksi</th>      
+                                            <th class="border-top-0">Tanggal</th>      
                                             <th class="border-top-0">Jenis Paket</th>
                                             <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
@@ -172,7 +173,7 @@
                                             <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
                                             <td>Active</td>
                                         </tr>
-                                    <?php endforeach ?>
+                                    <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>

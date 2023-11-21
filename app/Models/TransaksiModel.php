@@ -54,6 +54,9 @@ class TransaksiModel extends Model
     public function getUserTransaksi($id){
         return $this->where('id_customer', $id)->findAll();
     }
+    public function getTransaksiByTanggal($tanggal){
+        return $this->where('tanggal_booking', $tanggal)->findAll();
+    }
     public function updateTransaksi($data, $id){
         return $this->update($id, $data);
     }

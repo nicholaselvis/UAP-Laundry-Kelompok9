@@ -11,6 +11,7 @@ class RiwayatController extends BaseController
     {   
         $transaksi = new TransaksiModel();
         $data = $transaksi->getTransaksi();
-        return view("riwayat_transaksi",$data);
+        //dd($data);
+        return view("riwayat_transaksi",['data' => $data]);
     }
 }
