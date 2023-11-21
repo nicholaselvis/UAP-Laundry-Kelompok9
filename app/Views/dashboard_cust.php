@@ -28,10 +28,10 @@
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <div class="scroll-sidebar">
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item pt-2">
+                    <ul id="sidebarnav" >
+                        <li class="sidebar-item pt-2" >
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
+                                aria-expanded="false" >
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
@@ -50,12 +50,10 @@
         </aside>
 
     <div class="container-fluid py-5" style="position:absolute;">
-        <div class="container py-5" style="margin-left:250px; margin-top:-250px">
-        
+        <div class="container py-5" style="margin-left:380px; margin-top:-140px">
                 <div class="text">
                     Selamat Datang!
                 </div>
-
                 <div class="row px-5 padleft" style="justify-content: center;">
                         <div class="card" style="width: 18rem;">
                             <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>

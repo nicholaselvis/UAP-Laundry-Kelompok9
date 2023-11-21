@@ -51,24 +51,24 @@
     </div>
 </aside>
 
-    <div class="page-wrapper">
+<div class="page-wrapper">
             <div class="row" style="padding-top: 20px; padding-left: 240px;">
                 <div class="col-md-12 col-lg-12 col-sm-12">
                     <div class="white-box">
                         <div class="d-md-flex mb-3">
                             <h3 class="box-title mb-0">Riwayat Transaksi</h3>
-                        <aqqwg/div>
+                        </div>
                         <div class="table-responsive">
                             <table class="table no-wrap">
                                 <thead>
                                     <tr>
-                                        <th class="border-top-10">No.</th>
-                                        <th class="border-top-10">Tanggal</th>
-                                        <th class="border-top-10">Waktu</th>
-                                        <th class="border-top-10">Jenis Paket</th>
-                                        <th class="border-top-10">Kapasitas (kg)</th>
-                                        <th class="border-top-10">Harga</th>
-                                        <th class="border-top-10">Status</th>
+                                        <th class="border-top-0">No.</th>
+                                        <th class="border-top-0">Tanggal</th>
+                                        <th class="border-top-0">Waktu</th>
+                                        <th class="border-top-0">Jenis Paket</th>
+                                        <th class="border-top-0">Kapasitas (kg)</th>
+                                        <th class="border-top-0">Harga</th>
+                                        <th class="border-top-0">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -80,6 +80,8 @@
                                         <td class="txt-oflo">1 kg</td>
                                         <td class="txt-oflo">15.000</td>
                                         <td class="txt-oflo">Pending</td>
+                                        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                        
                                     </tr>
                                     <tr>
                                         <td>2</td>
