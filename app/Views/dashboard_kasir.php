@@ -49,10 +49,8 @@
             <div class="scroll-sidebar">
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item">
-                        <a href="<?= base_url('/dashboard_kasir')?>">
                     <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_kasir')?>" aria-expanded="false">
                             <i class="fa fa-table" aria-hidden="true"></i>
                             <span class="hide-menu">Dashboard</span>
                         </a>
@@ -106,98 +104,41 @@
                             <div class="d-md-flex mb-3">
                                 <h3 class="box-title mb-0">Booking Pesanan</h3>
                             </div>
-                            <div class="table-responsive" >
-                            <div style="display: inline-block;" >
-                                <b>
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 1</td>
-                                </table>
-                                <table border="3" cellpadding="51" bgcolor="#2cabe3">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class= "table-bordered" >
+                            <div class="container text-center">
+                        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 1</div>
                             </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 2</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 2</div>
                             </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 3</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 3</div>
                             </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 4</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 4</div>
                             </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33" >
-                                    <td> Mesin Cuci 5</td>
-                                </table>
-                                <table border="3" cellpadding="51" bgcolor="#2cabe3">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 5</div>
                             </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 6</td>
-                                </table>
-                                <table border="3" cellpadding="51" >
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 6</div>
                             </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 7</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 7</div>
                             </div>
-
-                            <div style="display: inline-block;" >
-                                <table border="3" cellpadding="33"  >
-                                    <td> Mesin Cuci 8</td>
-                                </table>
-                                <table border="3" cellpadding="51">
-                                <tr>
-                                    <td> Details</td>
-                                </tr>
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 8</div>
                             </div>
-                                </b>                                    
-                                </table>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 9</div>
                             </div>
+                            <div class="col">
+                            <div class="p-3">Mesin Cuci 10</div>
+                            </div>
+                        </div>
+                        </div>
                         </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
