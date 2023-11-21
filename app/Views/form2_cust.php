@@ -28,28 +28,25 @@
 
 <!-- Sidebar -->
 <aside class="left-sidebar" data-sidebarbg="skin6">
-    <div class="scroll-sidebar">
-        <nav class="sidebar-nav">
-            <ul id="sidebarnav">
-                <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                        aria-expanded="false">
-                        <i class="fa fa-table" aria-hidden="true"></i>
-                        <span class="hide-menu">Dashboard</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                        aria-expanded="false">
-                        
-                        <i class="far fa-clock" aria-hidden="true"></i>
-                        <span class="hide-menu">Riwayat</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</aside>
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" >
+                        <li class="sidebar-item pt-2" >
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_cust')?>">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Riwayat</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
 
 <div class="row alignment-items-center" 
     style="position:absolute; 
@@ -116,9 +113,9 @@
             <form action="#" method="post" enctype="multipart/form-data">
 
             <div style='margin-top:30px'></div>
-            <a href="#" type="button" class="btn btn-secondary" style="border-radius:10px;">Kembali</a>
-            <button name='submit' type="submit" class="btn btn-primary" style="float:right; background-color:#2C6BA2; border-radius:10px;">Konfirmasi</button>
-            <a href="#" type="button" class="btn btn-danger" style="float:right; margin-right:15px;border-radius:10px;">Batalkan Transaksi</a>
+            <a href="<?= base_url('/dashboard_cust')?>" type="button" class="btn btn-secondary" style="border-radius:10px;">Kembali</a>
+            <a href="<?= base_url('/bill_cust')?>" type="button" class="btn btn-primary" style="float:right; background-color:#2C6BA2; border-radius:10px;">Konfirmasi</a>
+            <a href="<?= base_url('/form2_cust')?>" type="button" class="btn btn-danger" style="float:right; margin-right:15px;border-radius:10px;">Batalkan Transaksi</a>
         </form>
     </div>
 

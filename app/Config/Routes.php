@@ -26,3 +26,14 @@ $routes -> get('/dashboard_cust', [CustController::class, 'index']);
 $routes -> get('/riwayat_cust', [CustController::class, 'riwayat']);
 $routes -> get('/form1_cust', [CustController::class, 'form1']);
 $routes -> get('/form2_cust', [CustController::class, 'form2']);
+// $routes -> get('/bill_cust', [CustController::class, 'bill_cust']);
+$routes -> post('/bill_cust', [CustController::class, 'bill_cust']);
+$routes -> get('/bill_cust', [CustController::class, 'bill_cust']);
+$routes -> get('/transaksiberhasil_cust', [CustController::class, 'transaksiberhasil_cust']);
+$routes->get('/form1_cust', [CustController::class, 'form1']);
+$routes->get('/form1', 'CustController::form1');
+$routes->get('/form2', 'CustController::form2');
+
+$routes->get('/form1/create', 'CustController::create');
+$routes -> post('/form1_cust/store', [CustControllerController::class, 'store']);
+$routes -> get('/form1_cust', [CustController::class, 'show']);

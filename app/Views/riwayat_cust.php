@@ -8,7 +8,6 @@
                     <b class="logo-icon">
                         <img src="assets/img/logonew.png" style="height:50px";/>
                     </b>
-                    
                 </a>
                 <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
                 ></a>
@@ -23,33 +22,29 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
 <!-- Sidebar -->
 <aside class="left-sidebar" data-sidebarbg="skin6">
-    <div class="scroll-sidebar">
-        <nav class="sidebar-nav">
-            <ul id="sidebarnav">
-                <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                        aria-expanded="false">
-                        <i class="fa fa-table" aria-hidden="true"></i>
-                        <span class="hide-menu">Dashboard</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                        aria-expanded="false">
-                        
-                        <i class="far fa-clock" aria-hidden="true"></i>
-                        <span class="hide-menu">Riwayat</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</aside>
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" >
+                        <li class="sidebar-item pt-2" >
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_cust')?>">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Riwayat</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
 
 <div class="page-wrapper">
             <div class="row" style="padding-top: 20px; padding-left: 240px;">
@@ -72,35 +67,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="txt-oflo">27 November 2023</td>
-                                        <td class="txt-oflo">08:00-09:00</td>
-                                        <td class="txt-oflo">Paket 1</td>
-                                        <td class="txt-oflo">1 kg</td>
-                                        <td class="txt-oflo">15.000</td>
-                                        <td class="txt-oflo">Pending</td>
-                                        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td class="txt-oflo">17 November 2023</td>
-                                        <td class="txt-oflo">15:00-16:30</td>
-                                        <td class="txt-oflo">Paket 1</td>
-                                        <td class="txt-oflo">3 kg</td>
-                                        <td class="txt-oflo">25.000</td>
-                                        <td class="txt-oflo">Selesai</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td class="txt-oflo">6 November 2023</td>
-                                        <td class="txt-oflo">13:00-13:30</td>
-                                        <td class="txt-oflo">Paket 2</td>
-                                        <td class="txt-oflo">5 kg</td>
-                                        <td class="txt-oflo">20.000</td>
-                                        <td class="txt-oflo">Selesai</td>
-                                    </tr>
+                                    <?php $row=1; foreach($data as $transaksi_laundry): ?>
+                                        <tr>
+                                            <td><?= $row++;?></td>
+                                            <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
+                                            <td><?= $transaksi_laundry['waktu'] ?></td>
+                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "Paket 1" : "Paket 2"; ?></td>
+                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "1-2 Kg" : "3-5 Kg"; ?></td>
+                                            <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
+                                            <td>Active</td>
+                                        </tr>
+                                    <?php endforeach ?>
                                 </tbody>
                             </table>
                         </div>
@@ -109,7 +86,7 @@
             </div>
         </div>
     </div>
-    
+
     <img src="<?= base_url("assets/img/bg.png")?>" alt="homepage" class="bg-overlay" />
-    
+
 <?= $this->endsection() ?>
