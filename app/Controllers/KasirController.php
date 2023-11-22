@@ -14,4 +14,11 @@ class KasirController extends BaseController
         $data = $transaksi->getTransaksiByTanggal($today);
         return view("dashboard_kasir",['data' => $data]);
     }
+    public function create(){
+
+        
+        return view("");
+    }
 }
+
+
