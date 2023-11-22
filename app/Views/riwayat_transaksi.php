@@ -125,7 +125,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $data = []; $row=1; foreach($data as $transaksi_laundry): ?>
+                                    <?php 
+                                        $row=1; 
+                                        foreach($transaksi as $transaksi_laundry){ 
+                                    ?>
                                         <tr>
                                             <td><?= $row++;?></td>
                                             <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
@@ -135,7 +138,9 @@
                                             <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
                                             <td>Active</td>
                                         </tr>
-                                    <?php endforeach; ?>
+                                    <?php 
+                                        }
+                                ?>
                                     </tbody>
                                 </table>
                             </div>
