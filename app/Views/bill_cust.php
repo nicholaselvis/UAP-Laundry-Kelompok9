@@ -90,17 +90,18 @@
             <label for="id_kapasitas_pesanan" class="col-sm-3 col-form-label">Kapasitas Pesanan</label>
             <div class="col-sm-8">
                 <?php $cap = null;
-                    if($data['kapasitas_pesanan']==1)$cap = "1-2";
-                    if($data['kapasitas_pesanan']==2)$cap = "3-5";
-                ?>
-                <input type="text" class="form-control" id="id_kapasitas_pesanan" value="<?=$cap?>">
-            </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="id_total_transaksi" class="col-sm-3 col-form-label">Total Transaksi</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="id_total_transaksi" value="<?= number_format($data['total_transaksi'],0,'.','.');?>" disabled readonly>
-            </div>
+                        if($data['kapasitas_pesanan']==1)$cap = "1-2";
+                        if($data['kapasitas_pesanan']==2)$cap = "3-5";
+                    ?>
+                    <td>Kapasitas Pesanan</td>
+                    <td><input type="text" name="id_jenis_layanan" value="<?=$cap?>" readonly/> Kg</td>
+                </tr>
+                <tr>
+                    <td>Total Transaksi</td>
+                    <td>Rp<input type="text" name="id_jenis_layanan" value="<?= number_format($data['total_transaksi'],0,'.','.');?>" readonly/></td>
+                </tr>
+            </tbody>
+            </table>
         </div>
 
         <div class="card-body d-flex justify-content-center">

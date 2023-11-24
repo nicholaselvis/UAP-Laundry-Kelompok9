@@ -533,6 +533,12 @@ pre {
 @media (min-width: 1600px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
+  
+.table-bordered{
+    border: 3px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
 
 .row {
   display: -webkit-box;

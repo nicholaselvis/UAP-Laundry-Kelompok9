@@ -22,3 +22,6 @@ class AdminController extends BaseController
         return view('kasir');
     }
 }
+
+}
+
