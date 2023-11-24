@@ -1,4 +1,5 @@
 * {
+
     color: #5da0d8;
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@
     object-fit: cover;
   }
   
-  .container-fluid {
+  .container-cust {
     height: 100vh;
     background: rgb(109, 179, 242, 0.5) !important;
     background-size: cover;
@@ -158,3 +159,164 @@
     align-items: center;
     font-weight: 500;
   }
+=======
+  color: #5da0d8;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #5D9FD9;
+  overflow-y: hidden;
+}
+
+.bg-overlay{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.container-fluid {
+  height: 100vh;
+  background: rgb(109, 179, 242, 0.5) !important;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  text-decoration: none;
+}
+
+.py-5 {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  border: 1px solid #5da0d8 !important;
+}
+
+.beranda{
+  text-decoration: none;
+  color: #134B7C;
+}
+
+.text-center{
+  font-size:28px;
+  font-weight: bolder;
+  color: #134B7C;
+}
+
+th {
+  font-weight: 700;
+  color: #0b5ea1;
+}
+th,
+td {
+  text-align: center !important;
+}
+
+.card {
+  height: 100%;
+}
+.nav-link {
+  color: #5da0d8;
+}
+.index {
+  font-weight: 800;
+}
+
+thead,
+th {
+  background-color: #f2f2f2 !important;
+}
+
+.btn-primary {
+  font-weight: 700;
+  background-color: #3B7AB1;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.btn-warning {
+  border: unset;
+  background-color: #ffe5b0;
+  color: #DBA02D;
+  border-radius: 15px;
+}
+
+.btn-secondary {
+  border: unset;
+  background-color: #9F9F9F;
+  color: #ffffff;
+  border-radius: 15px;
+}
+
+.btn-danger {
+  border: unset;
+  background-color: #FBDFE0;
+  color: #E62530;
+  border-radius: 15px;
+}
+
+.btn-success {
+  border: unset;
+  background-color: #96de8c;
+  color: #45AA39;
+  border-radius: 15px;
+}
+
+.card{
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: center;
+}
+
+.card-paket1{
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+  color:#134B7C;
+  font-weight: bolder;
+}
+
+.h5, h5{
+  font-weight: bolder;
+}
+.card-paket2{
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+  color:#134B7C;
+}
+
+.text{
+  text-align: center;
+  font-size: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 1000;
+  margin-bottom: 20px;
+  padding-top: 10%;
+}
+
+.h5.card-title {
+  color:#134B7C;
+  font-weight: bolder;
+}
+.card-body{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
