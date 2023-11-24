@@ -60,16 +60,6 @@
                                 </a>
                             </div>
                         </div>
-
-                        <div class="card" style="width: 18rem;">
-                            <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                            <div class="card-paket2">
-                                <h5 style="font-weight: bolder;">Booking</h5>
-                                <a href="<?= base_url('/form2_cust') ?>">
-                                <img src="<?= base_url("assets/img/tambah.png")?>" alt="homepage" width="40"/>
-                                </a>
-                            </div>
-                        </div>
                 </div>
         </div>
     </div>

@@ -69,8 +69,6 @@ class CustController extends BaseController
         $transaksi = new TransaksiModel();
         $transaksi = $transaksi->createTransaksi($data);
         
-      
-
         return view('bill_cust',['data' => $data]);
     }
 

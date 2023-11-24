@@ -172,7 +172,7 @@
                                             <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
                                             <td>Active</td>
                                         </tr>
-                                    <?php endforeach ?>
+                                    <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
