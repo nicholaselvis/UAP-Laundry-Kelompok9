@@ -142,9 +142,15 @@
                             <tr>
                             
                                 <td><?= $absensi['nama'] ?></td>                                    
+
+                                <td><?= $absensi['tanggal'] ?></td>
+                                <td><?= $absensi['time'] ?></td>                                               
+                                <td><?= $absensi['foto'] ?></td> 
+
                                 <td><?= $absensi['date'] ?></td>
                                 <td><?= $absensi['time'] ?></td>                                               
                                 <td><?= $absensi['bukti_absensi'] ?></td> 
+
                             
                             </tr>
                             <?php endforeach ?>

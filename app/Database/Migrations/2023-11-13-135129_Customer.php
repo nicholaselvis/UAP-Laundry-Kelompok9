@@ -26,11 +26,10 @@ class Customer extends Migration
             ],
             'tanggal_booking' => [
                 'type'              => 'DATE',
-                'unsigned'          => true,
             ],
         ]);
 
-        $this->forge->addKey('id_customer', true); // Corrected primary key definition
+        $this->forge->addKey('id_customer', true);
         $this->forge->createTable('customer');
     }
 

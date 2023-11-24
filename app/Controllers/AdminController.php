@@ -121,6 +121,7 @@ class AdminController extends BaseController
 
 
 
+
     //stok
     public function stok()
     {
@@ -208,3 +209,4 @@ class AdminController extends BaseController
             ->with('success', 'Berhasil menghapus data');
     }
 }
+
