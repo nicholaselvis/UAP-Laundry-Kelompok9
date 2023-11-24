@@ -25,3 +25,42 @@
     cursor: pointer; /* Mengubah kursor menjadi tangan saat tombol dihover */
 }
 
+
+/*input select */
+.custom-select {
+    width: 200px; /* Sesuaikan lebar sesuai kebutuhan */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    appearance: none; /* Menghilangkan default arrow pada input select di beberapa browser */
+  }
+  
+  /* Gaya saat input select dalam keadaan hover */
+  .custom-select:hover {
+    border-color: #555;
+  }
+  
+  /* Gaya saat input select dalam keadaan aktif atau fokus */
+  .custom-select:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+  }
+  
+  /* Gaya untuk panah dropdown */
+  .custom-select::after {
+    content: '\25BC'; /* Panah Unicode ke bawah */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Gaya saat input select dalam keadaan aktif atau fokus - panah dropdown */
+  .custom-select:focus::after {
+    color: #00bcd4;
+  }
+  

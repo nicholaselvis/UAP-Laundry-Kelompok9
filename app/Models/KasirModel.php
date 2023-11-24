@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class StokModel extends Model
+class KasirModel extends Model
 {
-    protected $table            = 'stok';
+    protected $table            = 'daftar_kasir';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'nama_barang', 'jumlah'];
+    protected $allowedFields    = ['id', 'nama', 'umur', 'jeniskelamin'];
 
     // Dates
     protected $useTimestamps = false;
@@ -26,7 +26,7 @@ class StokModel extends Model
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
- 
+
     // Callbacks
     protected $allowCallbacks = true;
     protected $beforeInsert   = [];
@@ -38,23 +38,23 @@ class StokModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function saveStok($data){
+    public function saveKasir($data){
         $this->insert($data);
     }
 
-    public function getStok($id = null)
+    public function getKasir($id = null)
     {
         if ($id != null) {
-            return $this->select(['id', 'nama_barang', 'jumlah'])->find($id);
+            return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->find($id);
         }
-        return $this->select(['id', 'nama_barang', 'jumlah'])->findAll();
+        return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->findAll();
     }
 
-    public function updateStok($data, $id){
+    public function updateKasir($data, $id){
         return $this->update($id, $data);
     }
 
-    public function deleteStok($id){
+    public function deleteKasir($id){
         return $this->delete($id);
     }
 }

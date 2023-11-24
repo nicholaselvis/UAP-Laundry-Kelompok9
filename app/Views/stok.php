@@ -162,8 +162,13 @@
                                             <td><?= $id++ ?></td>
                                             <td class="txt-oflo"><?= $stok['nama_barang'] ?></td>
                                             <td class="txt-oflo"><?= $stok['jumlah'] ?></td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
+                                            <td><a href="<?= base_url('/admin/' . $stok['id'] . '/edit_stok') ?>" class="tomboledit">Edit</a>
+                                            <form action="<?= base_url('/admin/'. $stok['id'].'/apus_stok') ?>" method="post" style="display:inline-block">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <?= csrf_field() ?>
+                                                <button type="submit" class="tombolapus">Hapus</button>
+                                            </form>
+                                            
                                         </tr>
                                     <?php
                                     }
