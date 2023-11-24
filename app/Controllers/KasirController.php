@@ -10,4 +10,11 @@ class KasirController extends BaseController
     {
         return view("dashboard_kasir");
     }
+    public function create(){
+
+        
+        return view("");
+    }
 }
+
+
