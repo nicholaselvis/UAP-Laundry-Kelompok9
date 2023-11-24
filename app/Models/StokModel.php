@@ -4,21 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class AbsensiModel extends Model
+class StokModel extends Model
 {
-    protected $table            = 'absensi';
-    protected $primaryKey       = 'id_user';
+    protected $table            = 'stok';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-
-    protected $allowedFields    = ['nama', 'tanggal', 'foto'];
-
-    protected $allowedFields    = ['nama', 'date', 'foto', 'time',	'bukti_absensi'	];
+    protected $allowedFields    = ['id', 'nama_barang', 'jumlah'];
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -29,7 +26,7 @@ class AbsensiModel extends Model
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
-
+ 
     // Callbacks
     protected $allowCallbacks = true;
     protected $beforeInsert   = [];
@@ -41,9 +38,23 @@ class AbsensiModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getAllUser(){
-        return $this->findAll();
-        // $query = $this->db->query('*')->from($this->table)->get();
-        // return $query->result();
+    public function saveStok($data){
+        $this->insert($data);
+    }
+
+    public function getStok($id = null)
+    {
+        if ($id != null) {
+            return $this->select(['id', 'nama_barang', 'jumlah'])->find($id);
+        }
+        return $this->select(['id', 'nama_barang', 'jumlah'])->findAll();
+    }
+
+    public function updateStok($data, $id){
+        return $this->update($id, $data);
+    }
+
+    public function deleteStok($id){
+        return $this->delete($id);
     }
 }

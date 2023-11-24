@@ -4,21 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class AbsensiModel extends Model
+class KasirModel extends Model
 {
-    protected $table            = 'absensi';
-    protected $primaryKey       = 'id_user';
+    protected $table            = 'daftar_kasir';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-
-    protected $allowedFields    = ['nama', 'tanggal', 'foto'];
-
-    protected $allowedFields    = ['nama', 'date', 'foto', 'time',	'bukti_absensi'	];
+    protected $allowedFields    = ['id', 'nama', 'umur', 'jeniskelamin'];
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -41,9 +38,23 @@ class AbsensiModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getAllUser(){
-        return $this->findAll();
-        // $query = $this->db->query('*')->from($this->table)->get();
-        // return $query->result();
+    public function saveKasir($data){
+        $this->insert($data);
+    }
+
+    public function getKasir($id = null)
+    {
+        if ($id != null) {
+            return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->find($id);
+        }
+        return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->findAll();
+    }
+
+    public function updateKasir($data, $id){
+        return $this->update($id, $data);
+    }
+
+    public function deleteKasir($id){
+        return $this->delete($id);
     }
 }
