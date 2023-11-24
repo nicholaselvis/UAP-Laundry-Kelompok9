@@ -11,6 +11,7 @@ use App\Controllers\KasirController;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+
 $routes -> get('/admin', [AdminController::class, 'index']);
 $routes -> get('/admin/stok', [AdminController::class, 'stok']);
 $routes -> get('/admin/kasir', [AdminController::class, 'kasir']);
@@ -27,3 +28,7 @@ $routes -> delete('/admin/(:any)', [AdminController::class, 'destroyKasir']);
 
 $routes -> get('/admin/create_stok', [AdminController::class, 'create_stok']);
 $routes -> post('/admin/store', [AdminController::class, 'store']);
+
+$routes -> get('/dashboard_kasir', [KasirController::class, 'index']);
+$routes -> get('/dashboard_cust', [CustController::class, 'index']);
+
