@@ -20,7 +20,7 @@ class AbsensiController extends BaseController
         // $builder = $this->db->table("absensi");
         $data = [
             'nama' => $this->request->getPost('nama'),
-            'tanggal' => $this->request->getPost('tanggal'),
+            'date' => $this->request->getPost('tanggal'),
             'time' => $this->request->getPost('time'),
             'foto' => $this->request->getPost('foto'),
         ];
@@ -45,12 +45,10 @@ class AbsensiController extends BaseController
 
     public function show(){
 
-        $absensi = $this->absensiModel->getAllUser();
-
         $data = [
             'absensi' => $this->absensiModel->getAllUser()
         ];
-        
+        // dd($data);
 
         return view('absensi_kasir', $data);
     }

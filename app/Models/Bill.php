@@ -4,18 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class AbsensiModel extends Model
+class Bill extends Model
 {
-    protected $table            = 'absensi';
-    protected $primaryKey       = 'id_user';
+    protected $table            = 'bills';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama', 'date', 'foto', 'time',	'bukti_absensi'	];
+    protected $allowedFields    = [];
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -37,10 +37,4 @@ class AbsensiModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function getAllUser(){
-        return $this->findAll();
-        // $query = $this->db->query('*')->from($this->table)->get();
-        // return $query->result();
-    }
 }

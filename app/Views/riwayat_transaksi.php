@@ -115,48 +115,32 @@
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">No.</th>
-                                            <th class="border-top-0">Nama</th>      
+                                            <th class="border-top-0">ID Transaksi</th>      
+                                            <th class="border-top-0">Tanggal</th>      
                                             <th class="border-top-0">Jenis Paket</th>
                                             <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
-                                            <th class="border-top-0">Status </th>
+                                            <th class="border-top-0">Status</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php 
+                                        $row=1; 
+                                        foreach($transaksi as $transaksi_laundry){ 
+                                    ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo">Estes</td>
-                                            
-                                            <td class="txt-oflo">3 </td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-oflo">36.000</span></td>
-                                            <td><span class="text-success">Selesai</span></td>
+                                            <td><?= $row++;?></td>
+                                            <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
+                                            <td><?= $transaksi_laundry['waktu'] ?></td>
+                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "Paket 1" : "Paket 2"; ?></td>
+                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "1-2 Kg" : "3-5 Kg"; ?></td>
+                                            <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
+                                            <td>Active</td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Layla</td>
-                                            
-                                            <td class="txt-oflo">4,5</td>
-                                            <td class="txt-oflo">- </td>
-                                            <td><span class="text-oflo">45.000</span></td>
-                                            <td><span class="text-oflo">Pending</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Rafaela</td>
-                                            <td class="txt-oflo">2</td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-oflo">32.000</span></td>
-                                            <td><span class="text-oflo">Pending</span></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Total Transaksi</th>
-                                            <th>3</th>
-                                            <th>9,5</th>
-                                            <th>-</th>
-                                            <th>111.000</th>
-                                            <th>-</th>
-                                        </tr>
+                                    <?php 
+                                        }
+                                ?>
                                     </tbody>
                                 </table>
                             </div>
