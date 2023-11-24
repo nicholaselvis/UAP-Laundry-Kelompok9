@@ -24,16 +24,7 @@ class AdminController extends BaseController
         return view('dashboard_admin');
     }
 
-
     //kasir
-
-
-    public function stok()
-    {
-        return view('stok');
-    }
-
-
     public function kasir()
     {
         $kasirModel = new KasirModel();
@@ -208,6 +199,3 @@ class AdminController extends BaseController
             ->with('success', 'Berhasil menghapus data');
     }
 }
-
-}
-
