@@ -9,59 +9,38 @@
     <header class="topbar" data-navbarbg="skin5">
         <nav class="navbar top-navbar navbar-expand-md navbar-dark">
             <div class="navbar-header" data-logobg="skin6">
-
                 <a class="navbar-brand">
-                    <!-- Logo icon -->
                     <b class="logo-icon">
-                        <!-- Dark Logo icon -->
-                        <img src="<?= base_url("assets/img/logonew.png") ?>" alt="homepage" style="height:50px;/>
-                        </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
-                        
-                    </a>
-                    <!-- ============================================================== -->
-                    <!-- End Logo -->
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
+                        <img src="<?= base_url("assets/img/logonew.png") ?>" alt="homepage" style="height:50px;"/>
+                    </b>
+                </a>
                     <a class=" nav-toggler waves-effect waves-light text-dark d-block d-md-none"></a>
             </div>
 
             <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-
-
-                <ul class="navbar-nav ms-auto d-flex align-items-center">
-
-                    <li>
+                <ul class="navbar-nav ms-auto d-flex align-items-center"><li>
                         <a class="profile-pic" href="#">
                             <img src="<?= base_url("assets/img/varun.jpg") ?>" alt="user-img" width="36"
                                 class="img-circle"><span class="text-white font-medium">Kasir</span></a>
                     </li>
-
                 </ul>
             </div>
         </nav>
     </header>
 
     <aside class="left-sidebar" data-sidebarbg="skin6">
-        <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
-            <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <!-- User Profile-->
-                    <li class="sidebar-item">
                         
-                    <li class="sidebar-item">
+                    <li class="sidebar-item pt-2">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_kasir')?>" aria-expanded="false">
                             <i class="fa fa-table" aria-hidden="true"></i>
                             <span class="hide-menu">Dashboard</span>
                         </a>
                     </a>
                         </li>
-                    <li class="sidebar-item">
+                    <li class="sidebar-item pt-2">
                             <a href="<?=base_url('/absensi_kasir')?>" class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
                                 aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -76,7 +55,7 @@
                                 <span class="hide-menu">Riwayat Transaksi</span>
                             </a>
                         </li>
-                    <li class="sidebar-item">
+                    <li class="sidebar-item pt-2">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
                             <i class="fa fa-globe" aria-hidden="true"></i>
                             <span class="hide-menu">Log Out</span>
@@ -84,9 +63,7 @@
                     </li>
                 </ul>
             </nav>
-            <!-- End Sidebar navigation -->
         </div>
-        <!-- End Sidebar scroll-->
     </aside>
 
     <div class="page-wrapper">
@@ -95,14 +72,56 @@
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <h4 class="page-title">Absensi Kasir</h4>
                 </div>
-                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"></div>
+            </div>
+        </div>
+
+        <div class="row alignment-items-center" 
+    style="position:absolute; 
+    background-color:white;
+    width:60%;
+    left:60%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    border-radius:15px;
+    padding:15px;
+    padding-bottom: 10px;">
+        <form action="<?= base_url('/absensi/store') ?>" method="POST">
+            <h4 style="text-align:center;">Silahkan lakukan absensi!</h4>
+            <div class="mb-1 row d-flex justify-content-center">
+                <label label for="fname" class="col-sm-10 col-form-label">Nama</label>
+                <div class="col-sm-10">
+                    <input input type="text" id="fname" name="nama">
                 </div>
             </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <div class="row">
-            <div class="col-12" style="background-image: url('./assets/img/bg.png')">
-                <div class="white-box">
+            <div class="mb-1 row d-flex justify-content-center">
+                <label for="tanggal"> Tanggal Kehadiran </label>
+                <div class="col-sm-10">
+                    <input type="date" id="tanggal" name="tanggal">
+                </div>
+            </div>
+            <div class="mb-1 row d-flex justify-content-center">
+                <label for="waktu">Waktu </label>
+                <div class="col-sm-10">
+                    <input name="tanggal_booking" type="date" class="form-control" id="tanggal_booking">
+                </div>
+            </div>
+            <div class="mb-1 row d-flex justify-content-center">
+                <label for="lname">Bukti Kehadiran :</label>
+                <div class="col-sm-10">
+                    <input type="file" name="foto">
+                </div>
+            </div>
+            
+            <div style='margin-top:30px'></div>
+            <button type="submit" class="btn btn-primary" style="float:right; background-color:#2C6BA2; border-radius:10px;">Kirim</button>
+        </form>
+    </div>
+
+        <!-- <div class="container-fluid py-5" style="position:absolute;">
+        <div class="container py-5" style="margin-left:380px; margin-top:-140px">
+                <div class="row px-5 padleft" style="justify-content: center;">
+
                     <table border="3">
                         <form action="<?= base_url('/absensi/store') ?>" method="POST">
                             <tr>
@@ -124,8 +143,8 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        </div> -->
+        <!-- <div class="row">
             <div class="col-12">
                     <div class="d-md-flex mb-3">
                         <h3 class="box-title mb-0">Riwayat Absensi</h3>
@@ -157,23 +176,7 @@
                         </table>
                     </div>
             </div>              
-        </div>
+        </div> -->
+        <img src="<?= base_url("assets/img/bg.png")?>" alt="homepage" class="bg-overlay" />
 
-<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/app-style-switcher.js"></script>
-<script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
-<!--Wave Effects -->
-<script src="js/waves.js"></script>
-<!--Menu sidebar -->
-<script src="js/sidebarmenu.js"></script>
-<!--Custom JavaScript -->
-<script src="js/custom.js"></script>
-<!--This page JavaScript -->
-<!--chartis chart-->
-<script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
-<script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-<script src="js/pages/dashboards/dashboard1.js"></script>
-
-<?= $this->endsection() ?>
+        <?= $this->endsection() ?>
