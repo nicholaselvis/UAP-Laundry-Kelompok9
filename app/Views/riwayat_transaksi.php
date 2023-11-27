@@ -143,8 +143,6 @@
                                             <td>Active</td>
                                         </tr>
 
-                                    <?php endforeach; ?>
-
                                     <?php 
                                         }
                                 ?>

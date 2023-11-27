@@ -52,8 +52,8 @@ class TransaksiModel extends Model
         return $this->select('transaksi_laundry.*')->findAll();
     }
 
-    public function getUserTransaksi($id){
-        return $this->where('id_customer', $id)->findAll();
+    // public function getUserTransaksi($id){
+    //     return $this->where('id_customer', $id)->findAll();
 
     public function getUserTransaksi(){
         // return $this->where('id_customer', $id)->findAll();

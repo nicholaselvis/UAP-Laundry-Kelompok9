@@ -18,8 +18,6 @@ class CustomerModel extends Model
 
     protected $useTimestamps = false;
 
-    protected $useTimestamps = false; // Change this to true if you want to use timestamps
-
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
