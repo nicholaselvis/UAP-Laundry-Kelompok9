@@ -79,16 +79,21 @@
     <div class="container-fluid py-5" style="position:absolute;">
         <div class="container py-5" style="margin-left:380px; margin-top:-140px">
                 <div class="row px-5 padleft" style="justify-content: center;">
-          
+            <?php
+                foreach($mesin_cuci as $mesin_cuci){
+            ?>
                 <div class="card" style="width: 18rem;">
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 1</h5>
-                            <p class="detail" href="<?base_url('mesin_cuci.php')?>">DETAIL</p>
+                            <h5 style="font-weight: bolder;">MESIN CUCI <?= $mesin_cuci["no_mesin"]?></h5>
+                            <a href="<?=base_url('detail/mesin/' . $mesin_cuci['id_mesin'])?>"">Detail</a>
                         </div>
                 </div>
+            <?php 
+                }
+            ?>
 
-                <div class="card" style="width: 18rem;">
+                <!-- <div class="card" style="width: 18rem;">
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 2</h5>
@@ -118,7 +123,7 @@
                             <h5 style="font-weight: bolder;">MESIN CUCI 5</h5>
                             <p class="detail" href="<?base_url('mesin_cuci.php')?>">DETAIL</p>
                         </div>
-                </div>
+                </div> -->
                 </div>
         </div>
     </div>
