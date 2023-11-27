@@ -1,7 +1,6 @@
 <?= $this->extend('layouts/app') ?>
 
 <?= $this->section('content') ?>
-<?php $id = 1; ?>
 
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
@@ -120,7 +119,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Daftar Kasir</h4>
+                        <h4 class="page-title">Edit Stok Barang</h4>
                         
                     </div>
                     
@@ -141,45 +140,24 @@
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                         <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Kasir</h3>
+                                
                                 
                             </div>
                             <div class="table-responsive">
-                                <table class="table no-wrap">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-top-0">ID</th>
-                                            <th class="border-top-0">Nama</th>
-                                            <th class="border-top-0">Umur</th>
-                                            <th class="border-top-0">Jenis Kelamin</th>
-                                            <th class="border-top-0">Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php
-                                        foreach ($kasir as $kasir){
-                                    ?>
-                                        <tr>
-                                        <td><?= $id++ ?></td>
-                                            <td class="txt-oflo"><?= $kasir['nama'] ?></td>
-                                            <td class="txt-oflo"><?= $kasir['umur'] ?></td>
-                                            <td class="txt-oflo"><?= $kasir['jeniskelamin'] ?></td>
-                                            <td><a href="<?= base_url('/admin/' . $kasir['id'] . '/edit_kasir') ?>" class="tomboledit">Edit</a>
-                                            <form action="<?= base_url('admin/' . $kasir['id']) ?>" method="post" style="display:inline-block">
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <?= csrf_field() ?>
-                                                <button type="submit" class="tombolapus">Hapus</button>
-                                            </form>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>    
-                                    </tbody>           
-                                </table>
-                                </table>
-                                <a href="<?= base_url('/admin/create_kasir')?>">
+                            <form action="<?= base_url('/admin/'. $stok['id'].'/update_stok') ?>" method="POST">
+                                <input type="hidden" name="_method" value="PUT">
+                                <?= csrf_field() ?>
+
+                                <label for="nama_barang">Nama Barang : </label>
+                                <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="nama_barang" id="nama_barang" style="width: 20%" value="<?= isset($stok['nama_barang']) ? $stok['nama_barang'] : '' ?>">
+                                <br>
+    
+                                <label for="jumlah">Jumlah : </label>
+                                <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="jumlah" id="jumlah" style="width: 20%" value="<?= isset($stok['jumlah']) ? $stok['jumlah'] : '' ?>">
+                                <br>
+
                                 <button type="submit" class="tombol">Tambah</button>
-                                </a>
+                            </form>
                             </div>
                         </div>
                     </div>

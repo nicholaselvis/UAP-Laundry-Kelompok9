@@ -4,24 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KasirModel extends Model
+class StokModel extends Model
 {
-<<<<<<< HEAD
-    protected $table            = 'mesin_cuci';
-    protected $primaryKey       = 'id_mesin';
-=======
-    protected $table            = 'daftar_kasir';
+    protected $table            = 'stok';
     protected $primaryKey       = 'id';
->>>>>>> 0173998503fdcec80d63e5159007c9762439c165
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-<<<<<<< HEAD
-    protected $allowedFields    = [];
-=======
-    protected $allowedFields    = ['id', 'nama', 'umur', 'jeniskelamin'];
->>>>>>> 0173998503fdcec80d63e5159007c9762439c165
+    protected $allowedFields    = ['id', 'nama_barang', 'jumlah'];
 
     // Dates
     protected $useTimestamps = false;
@@ -35,7 +26,7 @@ class KasirModel extends Model
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
-
+ 
     // Callbacks
     protected $allowCallbacks = true;
     protected $beforeInsert   = [];
@@ -47,29 +38,23 @@ class KasirModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-<<<<<<< HEAD
-    public function getAllMesin()
-    {
-            return $this->findAll();
-=======
-    public function saveKasir($data){
+    public function saveStok($data){
         $this->insert($data);
     }
 
-    public function getKasir($id = null)
+    public function getStok($id = null)
     {
         if ($id != null) {
-            return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->find($id);
+            return $this->select(['id', 'nama_barang', 'jumlah'])->find($id);
         }
-        return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->findAll();
+        return $this->select(['id', 'nama_barang', 'jumlah'])->findAll();
     }
 
-    public function updateKasir($data, $id){
+    public function updateStok($data, $id){
         return $this->update($id, $data);
     }
 
-    public function deleteKasir($id){
+    public function deleteStok($id){
         return $this->delete($id);
->>>>>>> 0173998503fdcec80d63e5159007c9762439c165
     }
 }
