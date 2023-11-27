@@ -98,8 +98,12 @@
                 <label for="jl" class="col-sm-10 col-form-label">Jenis Paket</label>
                 <div class="col-sm-10">
                     <select name="jl" class="form-select" aria-label="Default select example" required>
-                        <option selected-disabled hidden value="1">Pilih Paket Laundry</option>
-                        <option value="1">Paket 1</option>
+                        <option selected-disabled hidden value="1">Pilih Mesin Cuci</option>
+                        <option value="1">Mesin 1</option>
+                        <option value="2">Mesin 2</option>
+                        <option value="3">Mesin 3</option>
+                        <option value="4">Mesin 4</option>
+                        <option value="5">Mesin 5</option>
                     </select>
                 </div>
             </div>
@@ -108,7 +112,7 @@
                 <div class="col-sm-10">
                     <select name="jl" class="form-select" aria-label="Default select example" required>
                         <option selected-disabled hidden value="1">Pilih Kapasitas</option>
-                        <option value="2">1 -2 kg</option>
+                        <option value="2">1 - 2 kg</option>
                         <option value="2">3 - 5 kg</option>
                     </select>
                 </div>

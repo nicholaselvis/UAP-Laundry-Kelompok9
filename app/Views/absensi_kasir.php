@@ -76,80 +76,54 @@
             </div>
         </div>
 
-        <div class="row alignment-items-center" 
-    style="position:absolute; 
-    background-color:white;
-    width:60%;
-    left:60%;
-    top:50%;
-    transform:translate(-50%, -50%);
-    border-radius:15px;
-    padding:15px;
-    padding-bottom: 10px;">
-        <form action="<?= base_url('/absensi/store') ?>" method="POST">
-            <h4 style="text-align:center;">Silahkan lakukan absensi!</h4>
-            <div class="mb-1 row d-flex justify-content-center">
-                <label label for="fname" class="col-sm-10 col-form-label">Nama</label>
-                <div class="col-sm-10">
-                    <input input type="text" id="fname" name="nama">
-                </div>
-            </div>
-            <div class="mb-1 row d-flex justify-content-center">
-                <label for="tanggal"> Tanggal Kehadiran </label>
-                <div class="col-sm-10">
-                    <input type="date" id="tanggal" name="tanggal">
-                </div>
-            </div>
-            <div class="mb-1 row d-flex justify-content-center">
-                <label for="waktu">Waktu </label>
-                <div class="col-sm-10">
-                    <input name="tanggal_booking" type="date" class="form-control" id="tanggal_booking">
-                </div>
-            </div>
-            <div class="mb-1 row d-flex justify-content-center">
-                <label for="lname">Bukti Kehadiran :</label>
-                <div class="col-sm-10">
-                    <input type="file" name="foto">
-                </div>
-            </div>
+       <div class="form-container-kasir">
+        <form action="<?= base_url('/absensi/store') ?>" method="POST" class="needs-validation" novalidate>
+            <h4 class="text-center mb-4">Silahkan lakukan absensi!</h4>
+
             
-            <div style='margin-top:30px'></div>
-            <button type="submit" class="btn btn-primary" style="float:right; background-color:#2C6BA2; border-radius:10px;">Kirim</button>
+            <div class="form-group row">
+                <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                <div class="col-sm-10">
+                    <input type="text" id="nama" name="nama" class="form-control" required>
+                    <div class="invalid-feedback">Mohon isi nama.</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
+                <div class="col-sm-10">
+                    <input type="date" id="tanggal" name="tanggal" class="form-control" required>
+                    <div class="invalid-feedback">Mohon pilih tanggal.</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="tanggal_booking" class="col-sm-2 col-form-label">Waktu</label>
+                <div class="col-sm-10">
+                    <input type="time" id="tanggal_booking" name="tanggal_booking" class="form-control" required>
+                    <div class="invalid-feedback">Mohon pilih waktu.</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="foto" class="col-sm-2 col-form-label">Bukti Kehadiran</label>
+                <div class="col-sm-10">
+                    <input type="file" name="foto" class="form-control-file" required>
+                    <div class="invalid-feedback">Mohon unggah bukti kehadiran.</div>
+                </div>
+            </div>
+
+            
+            <button type="submit" class="btn btn-primary float-right">Kirim</button>
+        </form>
         </form>
     </div>
 
-        <!-- <div class="container-fluid py-5" style="position:absolute;">
-        <div class="container py-5" style="margin-left:380px; margin-top:-140px">
-                <div class="row px-5 padleft" style="justify-content: center;">
+    <div class="riwayat-absensi-kasir">
+        <h4 class="text-center mb-4">Lihat Riwayat Absensi Anda disini!</h4>
+        
 
-                    <table border="3">
-                        <form action="<?= base_url('/absensi/store') ?>" method="POST">
-                            <tr>
-                                <td><label for="fname">Nama Lengkap :</label>
-                                    <input type="text" id="fname" name="nama"><br>
-                                </td>
-                                <td><label for="tanggal">Tanggal Kehadiran :</label>
-                                    <input type="date" id="tanggal" name="tanggal"><br>
-                                </td>
-                                <td><label for="waktu">Waktu :</label>
-                                    <input type="time" id="waktu" name="time"><br>
-                                </td>
-                                <td><label for="lname">Bukti Kehadiran :</label>
-                                    <input type="file" name="foto"><br>
-                                </td>
-                            </tr>
-                    </table><br>
-                    <td><button type="submit">Submit</button></td>
-                    </form>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="row">
-            <div class="col-12">
-                    <div class="d-md-flex mb-3">
-                        <h3 class="box-title mb-0">Riwayat Absensi</h3>
-                    </div>
-                    <div class="table-responsive">
+        <div class="table-responsive">
                         <table class="table no-wrap">
                             <tr>
                             <th class="border-top-0">Nama Lengkap</th>
@@ -169,8 +143,9 @@
                             <?php endforeach ?>
                         </table>
                     </div>
-            </div>              
-        </div> -->
+        
+    </div>
+
         <img src="<?= base_url("assets/img/bg.png")?>" alt="homepage" class="bg-overlay" />
 
         <?= $this->endsection() ?>

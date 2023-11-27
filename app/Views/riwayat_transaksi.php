@@ -117,7 +117,7 @@
                                             <th class="border-top-0">No.</th>
                                             <th class="border-top-0">ID Transaksi</th>      
                                             <th class="border-top-0">Tanggal</th>      
-                                            <th class="border-top-0">Jenis Paket</th>
+                                            <th class="border-top-0">No. Mesin</th>
                                             <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
                                             <th class="border-top-0">Status</th>
@@ -133,8 +133,8 @@
                                             <td><?= $row++;?></td>
                                             <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
                                             <td><?= $transaksi_laundry['waktu'] ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "Paket 1" : "Paket 2"; ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "1-2 Kg" : "3-5 Kg"; ?></td>
+                                            <td><?= ($transaksi_laundry['id_mesin']==1)? "mesin 1" : "mesin 2"; ?></td>
+                                            <td><?= ($transaksi_laundry['id_mesin']==1)? "1-2 Kg" : "3-5 Kg"; ?></td>
                                             <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
                                             <td>Active</td>
                                         </tr>

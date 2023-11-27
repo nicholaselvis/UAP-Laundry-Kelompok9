@@ -13,7 +13,7 @@ class TransaksiModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_customer', 'id_jenis_layanan', 'kapasitas_pesanan', 'total_transaksi','tanggal_booking','waktu'];
+    protected $allowedFields    = ['id_customer', 'id_mesin', 'kapasitas_pesanan', 'total_transaksi','tanggal_booking','waktu'];
 
     // Dates
     protected $useTimestamps = true;

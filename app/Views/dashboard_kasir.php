@@ -84,7 +84,7 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 1</h5>
-                            <p>DETAIL</p>
+                            <p class="detail" href="<?base_url('mesin_cuci.php')?>">DETAIL</p>
                         </div>
                 </div>
 
@@ -92,7 +92,7 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 2</h5>
-                            <p>DETAIL</p>
+                            <p class="detail" href="<?base_url('mesin_cuci.php')?>">DETAIL</p>
                         </div>
                 </div>
 
@@ -100,7 +100,7 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 3</h5>
-                            <p>DETAIL</p>
+                            <p class="detail" href="<?base_url('mesin_cuci.php')?>">DETAIL</p>
                         </div>
                 </div>
 
@@ -108,7 +108,7 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 4</h5>
-                            <p>DETAIL</p>
+                            <p class="detail" href="<?base_url('mesin_cuci.php')?>">DETAIL</p>
                         </div>
                 </div>
 
@@ -116,7 +116,7 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 5</h5>
-                            <p>DETAIL</p>
+                            <p class="detail" href="<?base_url('mesin_cuci.php')?>">DETAIL</p>
                         </div>
                 </div>
                 </div>
