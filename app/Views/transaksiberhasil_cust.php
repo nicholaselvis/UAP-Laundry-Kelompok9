@@ -30,16 +30,13 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" >
                         <li class="sidebar-item pt-2" >
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false" >
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_cust')?>">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
-                                
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat</span>
                             </a>
@@ -49,28 +46,23 @@
             </div>
         </aside>
 
-    <div class="container-fluid py-5" style="position:absolute;">
-        <div class="container py-5" style="margin-left:380px; margin-top:-140px">
-                <div class="text">
-                    Selamat Datang!
-                </div>
-                <div class="row px-5 padleft" style="justify-content: center;">
-                        <div class="card" style="width: 18rem;">
-                            <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                            <div class="card-paket1">
-                                
-                                <h5 style="font-weight: bolder;">Booking Pesanan Anda!</h5>
-                                <p></p>
-                                <a href="<?=base_url('/form1_cust')?>">
-                                <img src="<?= base_url("assets/img/tambah.png")?>" alt="homepage" width="40"/>
-                                </a>
-                            </div>
-                        </div>
-
-                </div>
+        <div class="row" 
+        style="position:absolute; 
+        background-color:white;
+        width:45%;
+        left:60%;
+        top:50%;
+        transform:translate(-50%, -50%);
+        border-radius:15px;
+        padding:15px;">
+        <h3 style="text-align:center; margin-bottom:75px;">Yeay, Transaksi Berhasil!</h3>
+        <div class="card-body d-flex align-items-center justify-content-center" style="margin-bottom:90px;">
+            <img class="card-img-top" style="width:200px; height:200px;" src="./assets/img/success.png" alt="Card image cap">
+        </div>
+        <div class="card-body d-flex align-items-center justify-content-center" style="margin-bottom:25px;">
+                <a href="<?= base_url('/dashboard_cust')?>" class="btn" style="background-color:#2C6BA2; border-radius:25px; width:220px; color:white;font-size:22px;">Kembali</a>
         </div>
     </div>
 
-    <img src="<?= base_url("assets/img/bg.png")?>" alt="homepage" class="bg-overlay" />
-
+<img src="<?= base_url("assets/img/bg.png")?>" alt="homepage" class="bg-overlay" />
 <?= $this->endsection() ?>
