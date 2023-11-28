@@ -90,22 +90,32 @@
                 </div>
             </div>
             <div class="mb-1 row d-flex justify-content-center">
-                <label for="jl" class="col-sm-10 col-form-label">Jenis Layanan</label>
+                <label for="jl" class="col-sm-10 col-form-label">Mesin Cuci</label>
                 <div class="col-sm-10">
-                    <select name="jl" class="form-select" aria-label="Default select example" required>
-                        <option selected-disabled hidden value="1">Pilih Jenis Layanan</option>
-                        <option value="1">Paket 1</option>
-                        <option value="2">Paket 2</option>
+                    <select name="jl" class="form-select <?= ($validation->hasError('jl')) ? 'is-invalid' : ''; ?>" required>
+                        <option selected disabled hidden value="1">Pilih Mesin Cuci</option>
+                        <option value="1">Mesin Cuci 1</option>
+                        <option value="2">Mesin Cuci 2</option>
+                        <option value="3">Mesin Cuci 3</option>
+                        <option value="4">Mesin Cuci 4</option>
+                        <option value="5">Mesin Cuci 5</option>
                     </select>
+                    <div class="invalid-feedback">
+                        <?= $validation->getError('jl'); ?>
+                    </div>
                 </div>
             </div>
+
             <div class="mb-1 row d-flex justify-content-center">
                 <label for="jl" class="col-sm-10 col-form-label">Kapasitas (kg)</label>
                 <div class="col-sm-10">
                     <select name="total_kapasitas_laundry" class="form-select" aria-label="Default select example" required>
                         <option selected-disabled hidden value="0">Pilih Kapasitas</option>
                         <option value="1">1 -2 kg</option>
-                        <option value="2">3 - 5 kg</option>
+                        <option value="2">3 - 4 kg</option>
+                        <option value="3">5 - 6 kg</option>
+                        <option value="4">7 - 8 kg</option>
+                        <option value="5">9 - 10 kg</option>
                     </select>
                 </div>
             </div>
@@ -115,9 +125,8 @@
             <button name='submit' type="submit" class="btn btn-primary" style="float:right; background-color:#2C6BA2; border-radius:10px;">Konfirmasi</button>
             <a href="<?= base_url('/form1_cust')?>" type="button" class="btn btn-danger" style="float:right; margin-right:15px;border-radius:10px;">Batalkan Transaksi</a>
             
-            </form>
         </form>
-    </div>
+</div>
 
 <img src="<?= base_url("assets/img/bg.png")?>" alt="homepage" class="bg-overlay" />
 <?= $this->endsection() ?>
