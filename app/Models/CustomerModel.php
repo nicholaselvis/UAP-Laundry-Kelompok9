@@ -15,7 +15,11 @@ class CustomerModel extends Model
     protected $allowedFields    = ['nama_customer', 'no_wa'];
 
     // Dates
-    protected $useTimestamps = false; // Change this to true if you want to use timestamps
+
+    protected $useTimestamps = false;
+
+    // protected $useTimestamps = false; // Change this to true if you want to use timestamps
+
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

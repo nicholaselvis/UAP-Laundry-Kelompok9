@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/app') ?>
 
 <?= $this->section('content') ?>
+<?php $id = 1; ?>
 
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
@@ -73,21 +74,21 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('dashboard_admin')?>"
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('kasir')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin/kasir')?>"
                                 aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Kasir</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('stok')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin/stok')?>"
                                 aria-expanded="false">
                                 <i class="fa fa-font" aria-hidden="true"></i>
                                 <span class="hide-menu">Stok</span>
@@ -147,42 +148,38 @@
                                 <table class="table no-wrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">ID</th>
                                             <th class="border-top-0">Nama</th>
                                             <th class="border-top-0">Umur</th>
-                                            <th class="border-top-0">PIN</th>
+                                            <th class="border-top-0">Jenis Kelamin</th>
                                             <th class="border-top-0">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                        foreach ($kasir as $kasir){
+                                    ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo">Estes</td>
-                                            <td class="txt-oflo">20</td>
-                                            <td class="txt-oflo">123</td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
+                                        <td><?= $id++ ?></td>
+                                            <td class="txt-oflo"><?= $kasir['nama'] ?></td>
+                                            <td class="txt-oflo"><?= $kasir['umur'] ?></td>
+                                            <td class="txt-oflo"><?= $kasir['jeniskelamin'] ?></td>
+                                            <td><a href="<?= base_url('/admin/' . $kasir['id'] . '/edit_kasir') ?>" class="tomboledit">Edit</a>
+                                            <form action="<?= base_url('admin/' . $kasir['id']) ?>" method="post" style="display:inline-block">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <?= csrf_field() ?>
+                                                <button type="submit" class="tombolapus">Hapus</button>
+                                            </form>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Lesti</td>
-                                            <td class="txt-oflo">19</td>
-                                            <td class="txt-oflo">233</td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Rafa</td>
-                                            <td class="txt-oflo">22</td>
-                                            <td class="txt-oflo">2</td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
-                                        </tr>
-                                    </tbody>
-
+                                    <?php
+                                    }
+                                    ?>    
+                                    </tbody>           
                                 </table>
+                                </table>
+                                <a href="<?= base_url('/admin/create_kasir')?>">
                                 <button type="submit" class="tombol">Tambah</button>
+                                </a>
                             </div>
                         </div>
                     </div>

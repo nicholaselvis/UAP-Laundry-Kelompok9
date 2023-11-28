@@ -7,7 +7,6 @@
                         <b class="logo-icon">
                             <img src="<?= base_url("assets/img/logonew.png")?>" alt="Card image cap" style="height:50px";/>
                         </b>
-                        
                     </a>
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
                         ></a>
@@ -30,16 +29,13 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" >
                         <li class="sidebar-item pt-2" >
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false" >
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_cust')?>">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
-                                
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat</span>
                             </a>
