@@ -30,12 +30,12 @@ class KasirController extends BaseController
     function mesin_cuci($id){
         
         $data = [
-            // 'title' => 'Detail Kelas',
-            'mesin' => $this->transaksiModel->getUserTransaksi($id)
+            'mesin_cuci' => $this->transaksiModel->getUserTransaksi($id)
         ];
-        // return view('detail_kelas', $data);
-        // dd($data);
-        return view("mesin_cuci", $data);
+        
+        // return view('detail_kelas', $data);   
+        // dd($data);  
+        return view('mesin_cuci', $data);
     }
 }
 

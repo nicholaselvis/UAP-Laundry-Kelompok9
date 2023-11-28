@@ -99,7 +99,7 @@
                                 <table class="table no-wrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">No.</th>
+                                            <!-- <th class="border-top-0">No.</th> -->
                                             <th class="border-top-0">ID Transaksi</th>      
                                             <th class="border-top-0">Tanggal</th>      
                                             <th class="border-top-0">No. Mesin</th>
@@ -111,15 +111,13 @@
                                     </thead>
                                     <tbody>
                                     <?php 
-                                    $row = 1;
-                                    foreach ($mesin as $mesin_cuci) { ?>
+                                    foreach($mesin_cuci as $transaksi_laundry) { ?>
                                         <tr>
-                                            <td><?= $row += 1; ?></td>
-                                            <td><?= $mesin['id_transaksi']; ?></td>
-                                            <td><?= $mesin['tanggal_booking']; ?></td>
-                                            <td><?= $mesin['id_mesin']; ?></td>
-                                            <td><?= $mesin['kapasitas_pesanan']; ?></td>
-                                            <td><?= $mesin['total_transaksi']; ?></td>
+                                            <td><?= $mesin_cuci['id_transaksi']; ?></td>
+                                            <td><?= $mesin_cuci['tanggal_booking']; ?></td>
+                                            <td><?= $mesin_cuci['id_mesin']; ?></td>
+                                            <td><?= $mesin_cuci['kapasitas_pesanan']; ?></td>
+                                            <td><?= $mesin_cuci['total_transaksi']; ?></td>
                                             <td>Active</td>
                                         </tr>
                                     <?php } ?>

@@ -42,4 +42,5 @@ class KasirModel extends Model
     {
             return $this->findAll();
     }
+    
 }
