@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KasirModel extends Model
+class MesinModel extends Model
 {
-    protected $table            = 'daftar_kasir';
-    protected $primaryKey       = 'id';
+    protected $table            = 'mesin_cuci';
+    protected $primaryKey       = 'id_mesin';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['no_mesin', 'harga'];
 
     // Dates
     protected $useTimestamps = false;
@@ -38,28 +38,28 @@ class KasirModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function saveKasir($data){
+    public function saveMesin($data){
         $this->insert($data);
     }
 
-    public function getKasir($id = null)
+    public function getMesin($id = null)
     {
         if ($id != null) {
-            return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->find($id);
+            return $this->select(['id_mesin', 'no_mesin', 'harga'])->find($id);
         }
-        return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->findAll();
+        return $this->select(['id_mesin', 'no_mesin', 'harga'])->findAll();
     }
 
-    public function updateKasir($data, $id){
+    public function updateMesin($data, $id){
         return $this->update($id, $data);
     }
 
-    public function deleteKasir($id){
+    public function deleteMesin($id){
         return $this->delete($id);
     }
     public function getAllMesin(){
-            return $this->findAll();
+        return $this->findAll();
     }
-    
+
+
 }
-    

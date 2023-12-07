@@ -2016,6 +2016,10 @@ select.form-control:focus::-ms-value {
   animation: fadeIn 1s
   }
 
+  .bg-mesincuci{
+    background-image: url("assets/img/bg.png")!important;
+  }
+
 
 
   .riwayat-absensi-kasir{

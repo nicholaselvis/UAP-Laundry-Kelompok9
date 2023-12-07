@@ -13,9 +13,9 @@ class AbsensiModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
 
-    protected $allowedFields    = ['nama', 'tanggal', 'foto'];
+    // protected $allowedFields    = ['nama', 'tanggal', 'foto'];
 
-    // protected $allowedFields    = ['nama', 'date', 'foto', 'time',	'bukti_absensi'	];
+    protected $allowedFields    = ['nama', 'date', 'time',	'bukti_absensi'	];
 
     // Dates
     protected $useTimestamps = true;

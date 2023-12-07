@@ -4,35 +4,29 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\KasirModel;
+use App\Models\MesinModel;
 use App\Models\TransaksiModel;
 
 class KasirController extends BaseController
 {
     public $kasirModel;
     public $transaksiModel;
+    public $mesinModel;
+
     public function __construct(){
+
         $this->kasirModel = new KasirModel();
         $this->transaksiModel = new TransaksiModel();
+        $this->mesinModel = new MesinModel();
+
     }
     public function index()
-<<<<<<< HEAD
     {   
         $data = [
-            'mesin_cuci' => $this->kasirModel->getAllMesin()
+            'mesin_cuci' => $this->mesinModel->getAllMesin()
         ];
+        // dd($data);
         return view("dashboard_kasir", $data);
-=======
-    {
-        $today = date("Y-m-d");
-        $transaksi = new TransaksiModel();
-        $data = $transaksi->getTransaksiByTanggal($today);
-        return view("dashboard_kasir",['data' => $data]);
-    }
-    public function create(){
-
-        
-        return view("");
->>>>>>> 0173998503fdcec80d63e5159007c9762439c165
     }
     public function create(){
 

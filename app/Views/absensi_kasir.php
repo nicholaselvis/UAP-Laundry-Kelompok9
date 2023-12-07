@@ -92,7 +92,7 @@
             <div class="form-group row">
                 <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
                 <div class="col-sm-10">
-                    <input type="date" id="tanggal" name="tanggal" class="form-control" required>
+                    <input type="date" id="date" name="date" class="form-control" required>
                     <div class="invalid-feedback">Mohon pilih tanggal.</div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
             <div class="form-group row">
                 <label for="tanggal_booking" class="col-sm-2 col-form-label">Waktu</label>
                 <div class="col-sm-10">
-                    <input type="time" id="tanggal_booking" name="tanggal_booking" class="form-control" required>
+                    <input type="time" id="time" name="time" class="form-control" required>
                     <div class="invalid-feedback">Mohon pilih waktu.</div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
             <div class="form-group row">
                 <label for="foto" class="col-sm-2 col-form-label">Bukti Kehadiran</label>
                 <div class="col-sm-10">
-                    <input type="file" name="foto" class="form-control-file" required>
+                    <input type="file" name="bukti_absensi" class="form-control-file" required>
                     <div class="invalid-feedback">Mohon unggah bukti kehadiran.</div>
                 </div>
             </div>
@@ -135,16 +135,10 @@
                             <tr>
                             
                                 <td><?= $absensi['nama'] ?></td>                                    
-
-                                <td><?= $absensi['tanggal'] ?></td>
-                                <td><?= $absensi['time'] ?></td>                                               
-                                <td><?= $absensi['foto'] ?></td> 
-
                                 <td><?= $absensi['date'] ?></td>
                                 <td><?= $absensi['time'] ?></td>                                               
                                 <td><?= $absensi['bukti_absensi'] ?></td> 
-
-                            
+                           
                             </tr>
                             <?php endforeach ?>
                         </table>
