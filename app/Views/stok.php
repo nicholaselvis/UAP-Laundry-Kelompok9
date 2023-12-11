@@ -74,7 +74,7 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
@@ -120,7 +120,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Daftar Kasir</h4>
+                        <h4 class="page-title">Stok Barang</h4>
                         
                     </div>
                     
@@ -141,7 +141,7 @@
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                         <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Kasir</h3>
+                                <h3 class="box-title mb-0">Barang</h3>
                                 
                             </div>
                             <div class="table-responsive">
@@ -149,35 +149,34 @@
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">ID</th>
-                                            <th class="border-top-0">Nama</th>
-                                            <th class="border-top-0">Umur</th>
-                                            <th class="border-top-0">Jenis Kelamin</th>
+                                            <th class="border-top-0">Barang</th>
+                                            <th class="border-top-0">Stok</th>
                                             <th class="border-top-0">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-                                        foreach ($kasir as $kasir){
+                                        foreach ($stok as $stok){
                                     ?>
                                         <tr>
-                                        <td><?= $id++ ?></td>
-                                            <td class="txt-oflo"><?= $kasir['nama'] ?></td>
-                                            <td class="txt-oflo"><?= $kasir['umur'] ?></td>
-                                            <td class="txt-oflo"><?= $kasir['jeniskelamin'] ?></td>
-                                            <td><a href="<?= base_url('/admin/' . $kasir['id'] . '/edit_kasir') ?>" class="tomboledit">Edit</a>
-                                            <form action="<?= base_url('admin/' . $kasir['id']) ?>" method="post" style="display:inline-block">
+                                            <td><?= $id++ ?></td>
+                                            <td class="txt-oflo"><?= $stok['nama_barang'] ?></td>
+                                            <td class="txt-oflo"><?= $stok['jumlah'] ?></td>
+                                            <td><a href="<?= base_url('/admin/' . $stok['id'] . '/edit_stok') ?>" class="tomboledit">Edit</a>
+                                            <form action="<?= base_url('/admin/'. $stok['id'].'/apus_stok') ?>" method="post" style="display:inline-block">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <?= csrf_field() ?>
                                                 <button type="submit" class="tombolapus">Hapus</button>
                                             </form>
+                                            
                                         </tr>
                                     <?php
                                     }
-                                    ?>    
-                                    </tbody>           
+                                    ?>
+                                    </tbody>
+
                                 </table>
-                                </table>
-                                <a href="<?= base_url('/admin/create_kasir')?>">
+                                <a href="<?= base_url('/admin/create_stok')?>">
                                 <button type="submit" class="tombol">Tambah</button>
                                 </a>
                             </div>
