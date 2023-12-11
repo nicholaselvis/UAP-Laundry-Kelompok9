@@ -16,7 +16,7 @@ class CustomerModel extends Model
 
     // Dates
 
-    protected $useTimestamps = false;
+    
 
     // protected $useTimestamps = false; // Change this to true if you want to use timestamps
 

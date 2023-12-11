@@ -5,7 +5,7 @@
                 <div class="navbar-header" data-logobg="skin6">
                     <a class="navbar-brand" >
                         <b class="logo-icon">
-                            <img src="<?= base_url("assets/img/logonew.png")?>" alt="Card image cap" style="height:50px";/>
+                            <img src="<?= base_url("assets/css/img/logonew.png")?>"style="height:50px";/>
                         </b>
                     </a>
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
