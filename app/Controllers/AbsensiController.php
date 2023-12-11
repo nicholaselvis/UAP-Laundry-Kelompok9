@@ -21,12 +21,10 @@ class AbsensiController extends BaseController
         $data = [
             'nama' => $this->request->getPost('nama'),
  
-            'tanggal' => $this->request->getPost('tanggal'),
-
-            'date' => $this->request->getPost('tanggal'),
+            'date' => $this->request->getPost('date'),
 
             'time' => $this->request->getPost('time'),
-            'foto' => $this->request->getPost('foto'),
+            'bukti_absensi' => $this->request->getPost('bukti_absensi'),
         ];
         $datas = $this->request->getPost();
         // dd($datas);

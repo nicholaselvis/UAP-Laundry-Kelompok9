@@ -54,12 +54,16 @@
                         <div class="card" style="width: 18rem;">
                             <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                             <div class="card-paket1">
-                                <h5 style="font-weight: bolder;">Booking</h5>
-                                <a href="<?= base_url('/form1_cust') ?>">
+                                
+                                <h5 style="font-weight: bolder;">Booking Pesanan Anda!</h5>
+                                <p></p>
+                                <a href="<?=base_url('/form1_cust')?>">
                                 <img src="<?= base_url("assets/img/tambah.png")?>" alt="homepage" width="40"/>
                                 </a>
                             </div>
                         </div>
+                        
+
                 </div>
         </div>
     </div>

@@ -12,20 +12,14 @@ class RiwayatController extends BaseController
         $this->transaksiModel = new TransaksiModel();
     }
     public function index()
-
-    {   
-        $transaksi = new TransaksiModel();
-        $data = $transaksi->getTransaksi();
-        //dd($data);
-        return view("riwayat_transaksi",['data' => $data]);
-
+  
     {
         // $today = date("Y-m-d");
         // $transaksi = new TransaksiModel();
         // $data = $transaksi->getTransaksiByTanggal($today);
         // return view("riwayat_transaksi", ['data' => $data]);
         $data = [
-            'transaksi' => $this->transaksiModel->getUserTransaksi()
+            'transaksi' => $this->transaksiModel->getTransaksi()
         ];
 
         return view('riwayat_transaksi', $data);

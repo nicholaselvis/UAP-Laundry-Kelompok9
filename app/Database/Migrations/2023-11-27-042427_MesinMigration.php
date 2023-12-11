@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class JenisLayanan extends Migration
+class MesinMigration extends Migration
 {
     public function up()
     {
@@ -20,6 +20,11 @@ class JenisLayanan extends Migration
                 'constraint'        => 50,
             ],
             'harga' => [
+                'type'              => 'INT',
+                'constraint'        => 20,
+                'unsigned'          => true,
+            ],
+            'id_transaksi' => [ // Added foreign key column
                 'type'              => 'INT',
                 'constraint'        => 20,
                 'unsigned'          => true,
