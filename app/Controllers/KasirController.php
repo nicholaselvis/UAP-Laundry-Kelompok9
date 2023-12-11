@@ -19,11 +19,6 @@ class KasirController extends BaseController
         
         return view("");
     }
-    public function create(){
-
-        
-        return view("");
-    }
 }
 
 

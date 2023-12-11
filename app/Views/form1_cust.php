@@ -63,11 +63,8 @@
             <div class="mb-1 row d-flex justify-content-center">
                 <label for="nama" class="col-sm-10 col-form-label">Nama</label>
                 <div class="col-sm-10">
-                <select name="id_customer" class="form-select" aria-label="Default select example" required>
-                    <?php foreach($cust as $cs): ?>
-                        <option value="<?= $cs['id_customer']?>"><?= $cs['nama_customer'];?></option>
-                    <?php endforeach; ?>
-                    </select>
+                <input name="nama"  required>
+                    
                 </div>
             </div>
             <div class="mb-1 row d-flex justify-content-center">
