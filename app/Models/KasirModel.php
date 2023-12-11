@@ -12,7 +12,7 @@ class KasirModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['id', 'nama', 'umur', 'jeniskelamin'];
 
     // Dates
     protected $useTimestamps = false;
@@ -57,9 +57,4 @@ class KasirModel extends Model
     public function deleteKasir($id){
         return $this->delete($id);
     }
-    public function getAllMesin(){
-            return $this->findAll();
-    }
-    
 }
-    
