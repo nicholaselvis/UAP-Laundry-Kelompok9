@@ -13,7 +13,7 @@ class TransaksiModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_customer', 'id_jenis_layanan', 'kapasitas_pesanan', 'total_transaksi','tanggal_booking','waktu'];
+    protected $allowedFields    = [];
 
     // Dates
     protected $useTimestamps = true;
@@ -51,14 +51,18 @@ class TransaksiModel extends Model
         }
         return $this->select('transaksi_laundry.*')->findAll();
     }
-
     public function getUserTransaksi($id){
-        return $this->where('id_customer', $id)->findAll();
-
-    public function getUserTransaksi(){
+        // if($id != null){
+            // return $this->db->table('transaksi_laundry')->where('id_mesin', $id)->get()->getResultArray();
+        // }
+        // return $this->findAll();
         // return $this->where('id_customer', $id)->findAll();
-        return $this->select('transaksi_laundry.*, customer.id_customer')->join('customer', 'customer.id_customer = transaksi_laundry.id_customer')->findAll();
-
+        // return $this->select('transaksi_laundry.*, customer.id_customer')->join('customer', 'customer.id_customer = transaksi_laundry.id_customer')->findAll();
+  
+            return $this->select('transaksi_laundry.*, mesin_cuci.id_mesin')->join('mesin_cuci', 'mesin_cuci.id_mesin=transaksi_laundry.id_mesin')->where('transaksi_laundry.id_mesin', $id)->findAll();
+            // return $this->db->table('transaksi_laundry')->where('id_mesin', $id)->get()->getResultArray();  
+        // return $this->select('transaksi_laundry.*,mesin_cuci.no_mesin')->join('mesin_cuci','mesin_cuci.id_mesin = mesin_cuci.id_mesin')->find($id);
+        // return $this->select('user.*, kelas.nama_kelas')->join('kelas', 'kelas.id=user.id_kelas')->findAll();
     }
     public function getTransaksiByTanggal($tanggal){
         return $this->where('tanggal_booking', $tanggal)->findAll();

@@ -58,7 +58,7 @@
     border-radius:15px;
     padding:15px;
     padding-bottom: 10px;">
-        <form action="<?= base_url('/bill_cust')?>" method="post" enctype="multipart/form-data">
+        <form action="/riwayat_transaksi" method="post" enctype="multipart/form-data">
             <h4 style="text-align:center;">Transaksi Baru</h4>
             <div class="mb-1 row d-flex justify-content-center">
                 <label for="nama" class="col-sm-10 col-form-label">Nama</label>
@@ -93,18 +93,21 @@
                 <label for="jl" class="col-sm-10 col-form-label">Jenis Layanan</label>
                 <div class="col-sm-10">
                     <select name="jl" class="form-select" aria-label="Default select example" required>
-                        <option selected-disabled hidden value="1">Pilih Jenis Layanan</option>
-                        <option value="1">Paket 1</option>
-                        <option value="2">Paket 2</option>
+                        <option selected-disabled hidden value="1">Pilih Mesin Cuci</option>
+                        <option value="1">Mesin 1</option>
+                        <option value="2">Mesin 2</option>
+                        <option value="3">Mesin 3</option>
+                        <option value="4">Mesin 4</option>
+                        <option value="5">Mesin 5</option>
                     </select>
                 </div>
             </div>
             <div class="mb-1 row d-flex justify-content-center">
                 <label for="jl" class="col-sm-10 col-form-label">Kapasitas (kg)</label>
                 <div class="col-sm-10">
-                    <select name="total_kapasitas_laundry" class="form-select" aria-label="Default select example" required>
-                        <option selected-disabled hidden value="0">Pilih Kapasitas</option>
-                        <option value="1">1 -2 kg</option>
+                    <select name="jl" class="form-select" aria-label="Default select example" required>
+                        <option selected-disabled hidden value="1">Pilih Kapasitas</option>
+                        <option value="2">1 - 2 kg</option>
                         <option value="2">3 - 5 kg</option>
                     </select>
                 </div>
