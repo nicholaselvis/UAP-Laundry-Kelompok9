@@ -58,7 +58,7 @@
     border-radius:15px;
     padding:15px;
     padding-bottom: 10px;">
-        <form action="<?= base_url('/bill_cust')?>" method="post" enctype="multipart/form-data">
+        <form action="/riwayat_transaksi" method="post" enctype="multipart/form-data">
             <h4 style="text-align:center;">Transaksi Baru</h4>
             <div class="mb-1 row d-flex justify-content-center">
                 <label for="nama" class="col-sm-10 col-form-label">Nama</label>

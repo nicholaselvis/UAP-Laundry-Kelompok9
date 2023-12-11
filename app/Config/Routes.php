@@ -48,9 +48,6 @@ $routes -> post('/riwayat_transaksi', [RiwayatController::class, 'index']);
 $routes -> post('/absensi/store', [AbsensiController::class, 'store']);
 // $routes->get('/dashboard_kasir', [AbsensiController::class, 'dashboard_kasir']);
 
-$routes -> get('/detail/mesin/(:any)', [KasirController::class, 'mesin_cuci']);
-
-
 
 
 $routes -> get('/dashboard_cust', [CustController::class, 'index']);
