@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KasirModel extends Model
+class Bill extends Model
 {
-    protected $table            = 'daftar_kasir';
+    protected $table            = 'bills';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
@@ -37,29 +37,4 @@ class KasirModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function saveKasir($data){
-        $this->insert($data);
-    }
-
-    public function getKasir($id = null)
-    {
-        if ($id != null) {
-            return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->find($id);
-        }
-        return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->findAll();
-    }
-
-    public function updateKasir($data, $id){
-        return $this->update($id, $data);
-    }
-
-    public function deleteKasir($id){
-        return $this->delete($id);
-    }
-    public function getAllMesin(){
-            return $this->findAll();
-    }
-    
 }
-    

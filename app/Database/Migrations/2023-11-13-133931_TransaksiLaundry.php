@@ -20,7 +20,13 @@ class TransaksiLaundry extends Migration
                 'constraint'        => 20,
                 'unsigned'          => true,
             ],
-            'id_jenis_layanan' => [
+<<<<<<< HEAD
+            'id_mesin_cuci' => [
+=======
+
+            'id_mesin_cuci' => [
+
+>>>>>>> dev
                 'type'              => 'INT',
                 'constraint'        => 20,
                 'unsigned'          => true,
@@ -34,6 +40,18 @@ class TransaksiLaundry extends Migration
                 'type'              => 'INT',
                 'constraint'        => 20,
                 'unsigned'          => true,
+            ],
+            'created_at' => [
+                'type'              => 'DATETIME',
+                'null'              => true,
+            ],
+            'updated_at' => [
+                'type'              => 'DATETIME',
+                'null'              => true,
+            ],
+            'deleted_at' => [
+                'type'              => 'DATETIME',
+                'null'              => true,
             ],
         ]);
 
