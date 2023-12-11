@@ -4,8 +4,9 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
+        if(in_groups('admin'))return redirect()->to(base_url('admin'));
         return view('auth/login',[
             'config' => config('Auth')
         ]);
