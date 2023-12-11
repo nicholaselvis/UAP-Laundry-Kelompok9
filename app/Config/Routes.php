@@ -26,16 +26,10 @@ $routes -> get('/admin/kasir', [AdminController::class, 'kasir'], ['filter' => '
 $routes -> get('/admin/create_kasir', [AdminController::class, 'create_kasir'], ['filter' => 'role:admin']);
 $routes -> post('/admin/kasirstore', [AdminController::class, 'kasirstore'], ['filter' => 'role:admin']);
 
-$routes -> get('/admin/(:any)/edit_stok', [AdminController::class, 'edit_stok'], ['filter' => 'role:admin']);
-$routes -> put('/admin/(:any)/update_stok', [AdminController::class, 'updateStok'], ['filter' => 'role:admin']);
-$routes -> delete('/admin/(:any)/apus_stok', [AdminController::class, 'destroyStok'], ['filter' => 'role:admin']);
-
 $routes -> get('/admin/(:any)/edit_kasir', [AdminController::class, 'edit_kasir'], ['filter' => 'role:admin']);
 $routes -> put('/admin/(:any)', [AdminController::class, 'updateKasir'], ['filter' => 'role:admin']);
 $routes -> delete('/admin/(:any)', [AdminController::class, 'destroyKasir'], ['filter' => 'role:admin']);
 
-$routes -> get('/admin/create_stok', [AdminController::class, 'create_stok'], ['filter' => 'role:admin']);
-$routes -> post('/admin/store', [AdminController::class, 'store'], ['filter' => 'role:admin']);
 
 $routes -> get('/dashboard_kasir', [KasirController::class, 'index'], ['filter' => 'role:kasir']);
 $routes -> get('/absensi_kasir', [AbsensiController::class, 'show'], ['filter' => 'role:kasir']);
