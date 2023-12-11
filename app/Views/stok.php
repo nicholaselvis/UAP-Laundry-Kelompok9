@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/app') ?>
 
 <?= $this->section('content') ?>
+<?php $id = 1; ?>
 
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
@@ -73,7 +74,7 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
@@ -119,13 +120,12 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
-                    </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <h4 class="page-title">Stok Barang</h4>
                         
                     </div>
+                    
                 </div>
-                <!-- /.col-lg-12 -->
+                
             </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
@@ -135,77 +135,50 @@
             <!-- ============================================================== -->
             <div class="container-fluid" style="background-image: url('./assets/img/bg.png')">
                 <!-- ============================================================== -->
-                <!-- Three charts -->
-                <!-- ============================================================== -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Karyawan</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0"> 
-                                <span class="counter text-success">3</span>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Transaksi</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <span class="counter text-purple">50</span>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <!-- ============================================================== -->
                 <!-- RECENT SALES -->
                 <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
-                            <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Histori Transaksi</h3>
+                        <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Barang</h3>
+                                
                             </div>
                             <div class="table-responsive">
                                 <table class="table no-wrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">#</th>
-                                            <th class="border-top-0">Nama</th>
-                                            
-                                            <th class="border-top-0">Berat Cucian (Kg)</th>
-                                            <th class="border-top-0">Lainnya</th>
-                                            <th class="border-top-0">Harga</th>
+                                            <th class="border-top-0">ID</th>
+                                            <th class="border-top-0">Barang</th>
+                                            <th class="border-top-0">Stok</th>
+                                            <th class="border-top-0">Aksi</th>
                                         </tr>
                                     </thead>
-
                                     <tbody>
+                                    <?php
+                                        foreach ($stok as $stok){
+                                    ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo">Estes</td>
+                                            <td><?= $id++ ?></td>
+                                            <td class="txt-oflo"><?= $stok['nama_barang'] ?></td>
+                                            <td class="txt-oflo"><?= $stok['jumlah'] ?></td>
+                                            <td><a href="<?= base_url('/admin/' . $stok['id'] . '/edit_stok') ?>" class="tomboledit">Edit</a>
+                                            <form action="<?= base_url('/admin/'. $stok['id'].'/apus_stok') ?>" method="post" style="display:inline-block">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <?= csrf_field() ?>
+                                                <button type="submit" class="tombolapus">Hapus</button>
+                                            </form>
                                             
-                                            <td class="txt-oflo">3 </td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-success">36.000</span></td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Layla</td>
-                                            
-                                            <td class="txt-oflo">4,5</td>
-                                            <td class="txt-oflo">- </td>
-                                            <td><span class="text-info">45.000</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Rafaela</td>
-                                            <td class="txt-oflo">2</td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-info">32.000</span></td>
-                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                     </tbody>
 
                                 </table>
+                                <a href="<?= base_url('/admin/create_stok')?>">
+                                <button type="submit" class="tombol">Tambah</button>
+                                </a>
                             </div>
                         </div>
                     </div>
