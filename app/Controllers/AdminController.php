@@ -108,6 +108,8 @@ class AdminController extends BaseController
             ->with('success', 'Berhasil menghapus data');
     }
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -199,5 +201,6 @@ class AdminController extends BaseController
         return redirect()->to(base_url('/admin/stok'))
             ->with('success', 'Berhasil menghapus data');
     }
+>>>>>>> dev
 }
 
