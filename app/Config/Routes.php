@@ -19,7 +19,6 @@ $routes->get('/redirect', 'Home::redirect');
 
 $routes->get('/register', 'Home::register');
 
-
 $routes -> get('/admin', [AdminController::class, 'index'], ['filter' => 'role:admin']);
 $routes -> get('/admin/stok', [AdminController::class, 'stok'], ['filter' => 'role:admin']);
 $routes -> get('/admin/kasir', [AdminController::class, 'kasir'], ['filter' => 'role:admin']);
