@@ -1,74 +1,101 @@
-<?= $this->extend($config->viewLayout) ?>
-<?= $this->section('main') ?>
+<?= $this->extend('layouts/applogin') ?>
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-6 offset-sm-3">
+<?= $this->section('content') ?>
 
-			<div class="card">
-				<h2 class="card-header"><?=lang('Auth.loginTitle')?></h2>
-				<div class="card-body">
+<body>
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="<?= base_url('assets/img/1.jpg') ?>" alt="login" class="login-card-img">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="brand-wrapper">
+                <img src="<?= base_url('assets/img/logonew.png') ?>" alt="logo" class="logo">
+              </div>
+              <p class="login-card-description">Sign into your account</p>
+              
 
-					<?= view('App\Views\Auth\_message_block') ?>
+			<!-- formlogin -->
+				<form action="<?= url_to('login') ?>" method="post">
+					<?= csrf_field() ?>
 
-					<form action="<?= url_to('login') ?>" method="post">
-						<?= csrf_field() ?>
-
-<?php if ($config->validFields === ['email']): ?>
+					<!-- email -->
+                	<?php if ($config->validFields === ['email']): ?>
 						<div class="form-group">
-							<label for="login"><?=lang('Auth.email')?></label>
+							<label for="login" class="sr-only"><?=lang('Auth.email')?></label>
 							<input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
 								   name="login" placeholder="<?=lang('Auth.email')?>">
 							<div class="invalid-feedback">
 								<?= session('errors.login') ?>
 							</div>
 						</div>
-<?php else: ?>
+						    <?php else: ?>
 						<div class="form-group">
-							<label for="login"><?=lang('Auth.emailOrUsername')?></label>
+							<label for="login" class="sr-only" ><?=lang('Auth.emailOrUsername')?></label>
 							<input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
-								   name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
+								name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
 							<div class="invalid-feedback">
 								<?= session('errors.login') ?>
 							</div>
 						</div>
-<?php endif; ?>
+					<?php endif; ?>
+					<!-- end email -->
 
-						<div class="form-group">
-							<label for="password"><?=lang('Auth.password')?></label>
-							<input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
-							<div class="invalid-feedback">
-								<?= session('errors.password') ?>
-							</div>
+					<div class="form-group">
+						<label for="password" class="sr-only" ><?=lang('Auth.password')?></label>
+						<input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
+						<div class="invalid-feedback">
+							<?= session('errors.password') ?>
 						</div>
+					</div>
 
-<?php if ($config->allowRemembering): ?>
-						<div class="form-check">
-							<label class="form-check-label">
-								<input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
-								<?=lang('Auth.rememberMe')?>
-							</label>
-						</div>
-<?php endif; ?>
+				  	<button type="submit" class="btn btn-block login-btn mb-4"><?=lang('Auth.loginAction')?></button>
+                </form>
+			<!-- end form login -->
 
-						<br>
-
-						<button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.loginAction')?></button>
-					</form>
-
-					<hr>
-
-<?php if ($config->allowRegistration) : ?>
+                
+                <?php if ($config->allowRegistration) : ?>
 					<p><a href="<?= base_url('/register') ?>"><?=lang('Auth.needAnAccount')?></a></p>
-<?php endif; ?>
-<?php if ($config->activeResetter): ?>
-					<p><a href="<?= url_to('forgot') ?>"><?=lang('Auth.forgotYourPassword')?></a></p>
-<?php endif; ?>
-				</div>
-			</div>
+		        <?php endif; ?>
 
-		</div>
-	</div>
-</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="card login-card">
+        <img src="assets/images/login.jpg" alt="login" class="login-card-img">
+        <div class="card-body">
+          <h2 class="login-card-title">Login</h2>
+          <p class="login-card-description">Sign in to your account to continue.</p>
+          <form action="#!">
+            <div class="form-group">
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="password" class="sr-only">Password</label>
+              <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-prompt-wrapper">
+              <div class="custom-control custom-checkbox login-card-check-box">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember me</label>
+              </div>              
+              <a href="#!" class="text-reset">Forgot password?</a>
+            </div>
+            <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
+          </form>
+          <p class="login-card-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>
+        </div>
+      </div> -->
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
 
-<?= $this->endSection() ?>
+<?= $this->endsection() ?>

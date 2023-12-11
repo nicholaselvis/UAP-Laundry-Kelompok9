@@ -1,55 +1,71 @@
-<?= $this->extend($config->viewLayout) ?>
-<?= $this->section('main') ?>
+<?= $this->extend('layouts/applogin') ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 offset-sm-3">
+<?= $this->section('content') ?>
 
-            <div class="card">
-                <h2 class="card-header"><?=lang('Auth.register')?></h2>
-                <div class="card-body">
+<body>
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="<?= base_url('assets/img/1.jpg') ?>" alt="login" class="login-card-img">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="brand-wrapper">
+                <img src="<?= base_url('assets/img/logonew.png') ?>" alt="logo" class="logo">
+              </div>
+              <p class="login-card-description">Sign into your account</p>
+              
 
-                    <?= view('App\Views\Auth\_message_block') ?>
+			<!-- form regirter -->
+                <form action="<?= url_to('register') ?>" method="post">
+                    <?= csrf_field() ?>
 
-                    <form action="<?= url_to('register') ?>" method="post">
-                        <?= csrf_field() ?>
+					<!-- email -->
+                	<div class="form-group">
+                        <label for="email" class="sr-only"><?=lang('Auth.email')?></label>
+                        <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>"
+                               name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>">
+                        <small id="emailHelp" class="form-text text-muted"><?=lang('Auth.weNeverShare')?></small>
+                    </div>
+					<!-- end email -->
 
-                        <div class="form-group">
-                            <label for="email"><?=lang('Auth.email')?></label>
-                            <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>"
-                                   name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>">
-                            <small id="emailHelp" class="form-text text-muted"><?=lang('Auth.weNeverShare')?></small>
-                        </div>
+                    <!-- username -->
+                    <div class="form-group">
+                        <label for="username" class="sr-only"><?=lang('Auth.username')?></label>
+                        <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
+                    </div>
+                    <!-- end username -->
 
-                        <div class="form-group">
-                            <label for="username"><?=lang('Auth.username')?></label>
-                            <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
-                        </div>
+                    <!-- password -->
+                    <div class="form-group">
+                        <label for="password" class="sr-only"><?=lang('Auth.password')?></label>
+                        <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="password"><?=lang('Auth.password')?></label>
-                            <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
-                        </div>
+                    <div class="form-group">
+                        <label for="pass_confirm" class="sr-only"><?=lang('Auth.repeatPassword')?></label>
+                        <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
+                    </div>
+                    <!-- end password -->
 
-                        <div class="form-group">
-                            <label for="pass_confirm"><?=lang('Auth.repeatPassword')?></label>
-                            <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
-                        </div>
+                    <button type="submit" class="btn btn-block login-btn mb-4"><?=lang('Auth.register')?></button>
+                </form>
+			<!-- end form login -->
 
-                        <br>
+                
+            <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>"><?=lang('Auth.signIn')?></a></p>
 
-                        <button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.register')?></button>
-                    </form>
-
-
-                    <hr>
-
-                    <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>"><?=lang('Auth.signIn')?></a></p>
-                </div>
             </div>
-
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
 
-<?= $this->endSection() ?>
+<?= $this->endsection() ?>
