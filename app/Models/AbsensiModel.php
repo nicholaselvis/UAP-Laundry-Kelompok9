@@ -4,22 +4,21 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CustomerModel extends Model
+class AbsensiModel extends Model
 {
-    protected $table            = 'customer';
-    protected $primaryKey       = 'id_customer';
+    protected $table            = 'absensi';
+    protected $primaryKey       = 'id_user';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_customer', 'no_wa'];
+
+    // protected $allowedFields    = ['nama', 'tanggal', 'foto'];
+
+    protected $allowedFields    = ['nama', 'date', 'time',	'bukti_absensi'	];
 
     // Dates
-
-    
-
-    // protected $useTimestamps = false; // Change this to true if you want to use timestamps
-
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -42,31 +41,9 @@ class CustomerModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getAllCustomers()
-    {
+    public function getAllUser(){
         return $this->findAll();
-    }
-
-    public function createCustomer($data)
-    {
-        $this->insert($data);
-    }
-
-    public function getCustomer($id = null)
-    {
-        if ($id != null) {
-            return $this->find($id);
-        }
-        return $this->findAll();
-    }
-
-    public function updateCustomer($data, $id)
-    {
-        return $this->update($id, $data);
-    }
-
-    public function deleteCustomer($id)
-    {
-        return $this->delete($id);
+        // $query = $this->db->query('*')->from($this->table)->get();
+        // return $query->result();
     }
 }

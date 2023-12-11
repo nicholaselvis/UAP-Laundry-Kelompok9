@@ -4,22 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CustomerModel extends Model
+class KasirModel extends Model
 {
-    protected $table            = 'customer';
-    protected $primaryKey       = 'id_customer';
+    protected $table            = 'daftar_kasir';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_customer', 'no_wa'];
+    protected $allowedFields    = [];
 
     // Dates
-
-    
-
-    // protected $useTimestamps = false; // Change this to true if you want to use timestamps
-
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -42,31 +38,28 @@ class CustomerModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getAllCustomers()
-    {
-        return $this->findAll();
-    }
-
-    public function createCustomer($data)
-    {
+    public function saveKasir($data){
         $this->insert($data);
     }
 
-    public function getCustomer($id = null)
+    public function getKasir($id = null)
     {
         if ($id != null) {
-            return $this->find($id);
+            return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->find($id);
         }
-        return $this->findAll();
+        return $this->select(['id', 'nama', 'umur', 'jeniskelamin'])->findAll();
     }
 
-    public function updateCustomer($data, $id)
-    {
+    public function updateKasir($data, $id){
         return $this->update($id, $data);
     }
 
-    public function deleteCustomer($id)
-    {
+    public function deleteKasir($id){
         return $this->delete($id);
     }
+    public function getAllMesin(){
+            return $this->findAll();
+    }
+    
 }
+    
