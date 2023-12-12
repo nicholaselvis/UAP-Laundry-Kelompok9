@@ -2,26 +2,35 @@
 
 namespace App\Controllers;
 
-use App\Models\StokModel;
+use App\Models\TransaksiModel;
 use App\Models\KasirModel;
 use App\Controllers\BaseController;
 use CodeIgniter\Commands\Utilities\Publish;
 
 class AdminController extends BaseController
 {
-    public $stokModel;
+   
 
     protected $helpers=['Form'];
 
     public function __construct()
     {
-        $this->stokModel = new StokModel();
+       
         $this->kasirModel = new KasirModel();
+        $this->transaksiModel = new TransaksiModel();
     }
 
     public function index()
     {
-        return view('dashboard_admin');
+        $jumlahkasir = $this->kasirModel->get()->resultID->num_rows;
+        $jumlahtransaksi = $this->transaksiModel->get()->resultID->num_rows;
+
+        $data =[
+            'jumlahkasir' => $jumlahkasir,
+            'jumlahtransaksi' => $jumlahtransaksi
+        ];
+
+        return view('dashboard_admin', $data);
     }
 
     //kasir
@@ -32,7 +41,7 @@ class AdminController extends BaseController
         $kasir = $kasirModel->getKasir();
 
         $data = [
-            'title' => 'Stok Barang',
+            'title' => 'Kasir',
             'kasir'  => $this->kasirModel->getKasir(),
         ];
 
