@@ -49,14 +49,14 @@
                         </li>
 
                     <li class="sidebar-item pt-2">
-                            <a href="<?=base_url('/riwayat_transaksi')?>" class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
+                            <a href="<?=base_url('/riwayat_transaksi')?>" class="sidebar-link waves-effect waves-dark sidebar-link" 
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat Transaksi</span>
                             </a>
                         </li>
                     <li class="sidebar-item pt-2">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>" aria-expanded="false">
                             <i class="fa fa-globe" aria-hidden="true"></i>
                             <span class="hide-menu">Log Out</span>
                         </a>
