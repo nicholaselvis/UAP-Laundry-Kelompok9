@@ -41,6 +41,13 @@
                                 <span class="hide-menu">Riwayat</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
+                                aria-expanded="false">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <span class="hide-menu">LogOut</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -60,24 +67,33 @@
                                         <th class="border-top-0">No.</th>
                                         <th class="border-top-0">Tanggal</th>
                                         <th class="border-top-0">Waktu</th>
-                                        <th class="border-top-0">Jenis Paket</th>
+                                        <th class="border-top-0">Mesin Cuci</th>
                                         <th class="border-top-0">Kapasitas (kg)</th>
                                         <th class="border-top-0">Harga</th>
                                         <th class="border-top-0">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $row=1; foreach($data as $transaksi_laundry): ?>
-                                        <tr>
-                                            <td><?= $row++;?></td>
-                                            <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
-                                            <td><?= $transaksi_laundry['waktu'] ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "Paket 1" : "Paket 2"; ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "1-2 Kg" : "3-5 Kg"; ?></td>
-                                            <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
-                                            <td>Active</td>
-                                        </tr>
-                                    <?php endforeach ?>
+                                <?php $row = 1; foreach ($data as $transaksi_laundry): ?>
+                                    <tr>
+                                        <td><?= $row++;?></td>
+                                        <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
+                                        <td><?= $transaksi_laundry['waktu'] ?></td>
+                                        <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "Mesin 1" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 2) ? "Mesin 2" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 3) ? "Mesin 3" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 4) ? "Mesin 4" : "Mesin 5"))); ?>
+                                        </td>
+                                        <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "1-2 Kg" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 2) ? "3-4 Kg" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 3) ? "5-6 Kg" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 4) ? "7-8 Kg" : "9-10 Kg"))); ?>
+                                        </td>
+                                        <td><?= number_format($transaksi_laundry['total_transaksi'], 0, '.', '.'); ?></td>
+                                        <td>Active</td>
+                                    </tr>
+                                <?php endforeach; ?>
+
                                 </tbody>
                             </table>
                         </div>

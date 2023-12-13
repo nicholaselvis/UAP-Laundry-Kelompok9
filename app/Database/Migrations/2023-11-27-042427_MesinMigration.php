@@ -9,13 +9,13 @@ class MesinMigration extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id_mesin' => [
+            'id_mesin_cuci' => [
                 'type'              => 'INT',
                 'constraint'        => 20,
                 'unsigned'          => true,
                 'auto_increment'    => true,
             ],
-            'no_mesin' => [
+            'nama_mesin' => [
                 'type'              => 'VARCHAR',
                 'constraint'        => 50,
             ],
@@ -31,11 +31,7 @@ class MesinMigration extends Migration
             ],
         ]);
 
-        $this->forge->addKey('id_mesin', true);
-        
-        // Added foreign key
-        $this->forge->addForeignKey('id_transaksi', 'transaksi_laundry', 'id_transaksi', 'CASCADE', 'CASCADE');
-        
+        $this->forge->addKey('id_mesin_cuci', true); // Corrected primary key definition
         $this->forge->createTable('mesin_cuci');
     }
 

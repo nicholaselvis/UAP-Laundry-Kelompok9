@@ -5,7 +5,7 @@
                 <div class="navbar-header" data-logobg="skin6">
                     <a class="navbar-brand" >
                         <b class="logo-icon">
-                            <img src="<?= base_url("assets/img/logonew.png")?>" alt="Card image cap" style="height:50px";/>
+                            <img src="<?= base_url("assets/css/img/logonew.png")?>"style="height:50px";/>
                         </b>
                     </a>
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
@@ -38,6 +38,13 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
+                                aria-expanded="false">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <span class="hide-menu">LogOut</span>
                             </a>
                         </li>
                     </ul>

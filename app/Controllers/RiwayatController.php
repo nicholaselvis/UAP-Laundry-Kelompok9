@@ -22,9 +22,11 @@ class RiwayatController extends BaseController
             'transaksi' => $this->transaksiModel->getTransaksi()
         ];
 
-        return view('riwayat_transaksi', $data);
+    //     return view('riwayat_transaksi', $data);
 
     }
        
 }
+
+
 
