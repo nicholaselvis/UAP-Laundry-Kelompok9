@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/app') ?>
+<?= $this->extend('layouts/appadmin') ?>
 
 <?= $this->section('content') ?>
 
@@ -86,15 +86,9 @@
                                 <span class="hide-menu">Kasir</span>
                             </a>
                         </li>
+                        
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin/stok')?>"
-                                aria-expanded="false">
-                                <i class="fa fa-font" aria-hidden="true"></i>
-                                <span class="hide-menu">Stok</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
                                 aria-expanded="false">
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                 <span class="hide-menu">LogOut</span>
@@ -140,9 +134,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-12">
                         <div class="white-box analytics-info">
-                            <h3 class="box-title">Karyawan</h3>
+                            <h3 class="box-title">Kasir</h3>
                             <ul class="list-inline two-part d-flex align-items-center mb-0"> 
-                                <span class="counter text-success">3</span>
+                                <span class="counter text-success"><?= $jumlahkasir ;?></span>
                             </ul>
                         </div>
                     </div>
@@ -150,7 +144,7 @@
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Total Transaksi</h3>
                             <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <span class="counter text-purple">50</span>
+                                <span class="counter text-purple"><?= $jumlahtransaksi ;?></span>
                             </ul>
                         </div>
                     </div>
@@ -167,44 +161,42 @@
                                 <h3 class="box-title mb-0">Histori Transaksi</h3>
                             </div>
                             <div class="table-responsive">
-                                <table class="table no-wrap">
+                            <table class="table no-wrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">#</th>
-                                            <th class="border-top-0">Nama</th>
-                                            
-                                            <th class="border-top-0">Berat Cucian (Kg)</th>
-                                            <th class="border-top-0">Lainnya</th>
+                                            <th class="border-top-0">No.</th>
+                                            <th class="border-top-0">ID Transaksi</th>      
+                                            <th class="border-top-0">Tanggal</th>      
+                                            <th class="border-top-0">Mesin Cuci</th>
+                                            <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
+                                            <th class="border-top-0">Status</th>
+
                                         </tr>
                                     </thead>
-
                                     <tbody>
+                                    <?php $data = []; $row=1; foreach($data as $transaksi_laundry): ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo">Estes</td>
-                                            
-                                            <td class="txt-oflo">3 </td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-success">36.000</span></td>
+                                            <td><?= $row++;?></td>
+                                            <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
+                                            <td><?= $transaksi_laundry['waktu'] ?></td>
+                                            <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "Mesin 1" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 2) ? "Mesin 2" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 3) ? "Mesin 3" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 4) ? "Mesin 4" : "Mesin 5"))); ?>
+                                            </td>
+                                            <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "1-2 Kg" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 2) ? "3-4 Kg" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 3) ? "5-6 Kg" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 4) ? "7-8 Kg" : "9-10 Kg"))); ?>
+                                            </td>
+                                            <td><?= number_format($transaksi_laundry['total_transaksi'], 0, '.', '.'); ?></td>
+                                            <td>Active</td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Layla</td>
-                                            
-                                            <td class="txt-oflo">4,5</td>
-                                            <td class="txt-oflo">- </td>
-                                            <td><span class="text-info">45.000</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Rafaela</td>
-                                            <td class="txt-oflo">2</td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-info">32.000</span></td>
-                                        </tr>
+                                        
+                                        <?php endforeach; ?>
+ 
                                     </tbody>
-
                                 </table>
                             </div>
                         </div>

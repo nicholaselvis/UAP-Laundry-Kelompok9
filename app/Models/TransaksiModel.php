@@ -13,7 +13,7 @@ class TransaksiModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_customer', 'id_jenis_layanan', 'kapasitas_pesanan', 'total_transaksi','tanggal_booking','waktu'];
+    protected $allowedFields    = ['id_customer', 'id_mesin_cuci', 'kapasitas_pesanan', 'total_transaksi','tanggal_booking','waktu'];
 
     // Dates
     protected $useTimestamps = true;
@@ -51,9 +51,6 @@ class TransaksiModel extends Model
         }
         return $this->select('transaksi_laundry.*')->findAll();
     }
-
-    // public function getUserTransaksi($id){
-    //     return $this->where('id_customer', $id)->findAll();
 
     public function getUserTransaksi(){
         // return $this->where('id_customer', $id)->findAll();

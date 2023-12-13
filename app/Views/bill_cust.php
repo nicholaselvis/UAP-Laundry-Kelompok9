@@ -73,35 +73,40 @@
         <div class="mb-3 row">
             <label for="waktu" class="col-sm-3 col-form-label">Waktu Booking</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="waktu" value="<?=$data['waktu'];?>">
+                <input type="text" class="form-control" id="waktu" value="<?=$data['waktu'];?>"readonly>
             </div>
         </div>
         <div class="mb-3 row">
-            <label for="id_jenis_layanan" class="col-sm-3 col-form-label">Jenis Layanan</label>
+            <label for="id_mesin_cuci" class="col-sm-3 col-form-label">Mesin Cuci</label>
             <div class="col-sm-8">
                 <?php $jenis = null;
-                    if($data['id_jenis_layanan']==1)$jenis = "Paket 1";
-                    if($data['id_jenis_layanan']==2)$jenis = "Paket 2";
+                    if($data['id_mesin_cuci']==1)$jenis = "Mesin 1";
+                    if($data['id_mesin_cuci']==2)$jenis = "Mesin 2";
+                    if($data['id_mesin_cuci']==3)$jenis = "Mesin 3";
+                    if($data['id_mesin_cuci']==4)$jenis = "Mesin 4";
+                    if($data['id_mesin_cuci']==5)$jenis = "Mesin 5";
                 ?>
-                <input type="text" class="form-control" id="id_jenis_layanan" value="<?=$jenis?>">
+                <input type="text" class="form-control" id="id_mesin_cuci" value="<?=$jenis?>"readonly>
             </div>
         </div>
         <div class="mb-3 row">
             <label for="id_kapasitas_pesanan" class="col-sm-3 col-form-label">Kapasitas Pesanan</label>
             <div class="col-sm-8">
-                <?php $cap = null;
-                        if($data['kapasitas_pesanan']==1)$cap = "1-2";
-                        if($data['kapasitas_pesanan']==2)$cap = "3-5";
-                    ?>
-                    <td>Kapasitas Pesanan</td>
-                    <td><input type="text" name="id_jenis_layanan" value="<?=$cap?>" readonly/> Kg</td>
-                </tr>
-                <tr>
-                    <td>Total Transaksi</td>
-                    <td>Rp<input type="text" name="id_jenis_layanan" value="<?= number_format($data['total_transaksi'],0,'.','.');?>" readonly/></td>
-                </tr>
-            </tbody>
-            </table>
+                <?php $jenis = null;
+                    if($data['kapasitas_pesanan']==1)$cap = "1-2";
+                    if($data['kapasitas_pesanan']==2)$cap = "3-4";
+                    if($data['kapasitas_pesanan']==3)$cap = "5-6";
+                    if($data['kapasitas_pesanan']==4)$cap = "7-8";
+                    if($data['kapasitas_pesanan']==5)$cap = "9-10";
+                ?>
+                <input type="text" class="form-control" id="id_kapasitas_pesanan" value="<?=$cap?> Kg"readonly>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="#" class="col-sm-3 col-form-label">Total Transaksi</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="id_mesin_cuci" value="Rp<?= number_format($data['total_transaksi'],0,'.','.');?>" readonly/>
+            </div>
         </div>
 
         <div class="card-body d-flex justify-content-center">

@@ -5,7 +5,7 @@
                 <div class="navbar-header" data-logobg="skin6">
                     <a class="navbar-brand" >
                         <b class="logo-icon">
-                            <img src="<?= base_url("assets/img/logonew.png")?>" alt="Card image cap" style="height:50px";/>
+                            <img src="<?= base_url("assets/css/img/logonew.png")?>"style="height:50px";/>
                         </b>
                     </a>
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
@@ -40,6 +40,13 @@
                                 <span class="hide-menu">Riwayat</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
+                                aria-expanded="false">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <span class="hide-menu">LogOut</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -54,12 +61,16 @@
                         <div class="card" style="width: 18rem;">
                             <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                             <div class="card-paket1">
-                                <h5 style="font-weight: bolder;">Booking</h5>
-                                <a href="<?= base_url('/form1_cust') ?>">
+                                
+                                <h5 style="font-weight: bolder;">Booking Pesanan Anda!</h5>
+                                <p></p>
+                                <a href="<?=base_url('/form1_cust')?>">
                                 <img src="<?= base_url("assets/img/tambah.png")?>" alt="homepage" width="40"/>
                                 </a>
                             </div>
                         </div>
+                        
+
                 </div>
         </div>
     </div>

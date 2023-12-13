@@ -54,7 +54,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
                                 aria-expanded="false">
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                 <span class="hide-menu">Log Out</span>
@@ -77,22 +77,35 @@
         </div>
 
     <div class="container-fluid py-5" style="position:absolute;">
-        <div class="container py-5" style="margin-left:380px; margin-top:-140px">
-                <div class="row px-5 padleft" style="justify-content: center;">
-          
-                <div class="card" style="width: 18rem;">
+        <div class="container py-5" style="margin-left:380px; margin-top:-65px">
+            <div class="row px-3" style="justify-content: center;">
+            <?php
+                foreach($mesin_cuci as $mesin){
+            ?>
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
+                            <div class="card-paket1">
+                                <h5 style="font-weight: bolder;">MESIN CUCI <?= $mesin["id_mesin"]?></h5>
+                                <a href="<?=base_url('detail/mesin/' . $mesin['id_mesin'])?>"">Detail</a>
+                            </div>
+                    </div>
+                    <?php 
+                }
+                ?>
+                </div>
+                <!-- <div class="card" style="width: 18rem;">
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 1</h5>
-                            <p>DETAIL</p>
+                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
                         </div>
-                </div>
-
+                </div>      
+                
                 <div class="card" style="width: 18rem;">
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 2</h5>
-                            <p>DETAIL</p>
+                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
                         </div>
                 </div>
 
@@ -100,7 +113,7 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 3</h5>
-                            <p>DETAIL</p>
+                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
                         </div>
 
                 </div>
@@ -109,45 +122,7 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 4</h5>
-                            <p>DETAIL</p>
-
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-                        <div class="white-box">
-                            <div class="d-md-flex mb-3">
-                                <h3 class="box-title mb-0">Transaksi Hari Ini</h3>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table no-wrap">
-                                     
-                                        <tr>
-                                            <th class="border-top-0">No.</th>
-                                            <th class="border-top-0">ID Transaksi</th> 
-                                            <th class="border-top-0">Tanggal</th>           
-                                            <th class="border-top-0">Jenis Paket</th>
-                                            <th class="border-top-0">Kapasitas (Kg)</th>
-                                            <th class="border-top-0">Harga</th>
-                                            <th class="border-top-0">Status</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php $row=1; foreach($data as $transaksi_laundry): ?>
-                                        <tr>
-                                            <td><?= $row++;?></td>
-                                            <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
-                                            <td><?= $transaksi_laundry['waktu'] ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "Paket 1" : "Paket 2"; ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "1-2 Kg" : "3-5 Kg"; ?></td>
-                                            <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
-                                            <td>Active</td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                    
-                                    </tbody>
-                                </table>
-                            </div>
- 
+                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
                         </div>
                 </div>
 
@@ -155,10 +130,9 @@
                     <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
                         <div class="card-paket1">
                             <h5 style="font-weight: bolder;">MESIN CUCI 5</h5>
-                            <p>DETAIL</p>
+                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
                         </div>
-                </div>
-                </div>
+                </div> -->
         </div>
     </div>
 

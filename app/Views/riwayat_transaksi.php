@@ -2,36 +2,17 @@
 
 <?= $this->section('content') ?>
 
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
-                    <!-- ============================================================== -->
-                    <!-- Logo -->
-                    <!-- ============================================================== -->
                     <a class="navbar-brand" >
-                        <!-- Logo icon -->
                         <b class="logo-icon">
-                            <!-- Dark Logo icon -->
-                            <img src="<?= base_url("assets/img/logonew.png")?>" alt="homepage" style="height:50px;/>
+                        <img src="<?= base_url("assets/img/logonew.png")?>" alt="homepage" style="height:50px;"/>
+
                         </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
-                        
-                    </a>
-                    <!-- ============================================================== -->
-                    <!-- End Logo -->
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
+
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
                         ></a>
                 </div>
@@ -53,9 +34,7 @@
         </header>
       
         <aside class="left-sidebar" data-sidebarbg="skin6">
-            <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <!-- User Profile-->
@@ -75,14 +54,14 @@
                         </li>
                         
                         <li class="sidebar-item pt-2">
-                            <a href="<?=base_url('/riwayat_transaksi')?>" class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a href="<?=base_url('/riwayat_transaksi')?>" class="sidebar-link waves-effect waves-dark sidebar-link" 
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat Transaksi</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
                                 aria-expanded="false">
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                 <span class="hide-menu">Log Out</span>
@@ -99,7 +78,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Riwayat Transaksi</h4>
-                        <input type="date" id="lname" name="tanggal"><br></td>                    </div>
+                        <input type="date" id="lname" name="tanggal"><br></td>
+                    </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                     </div>
                 </div>
@@ -117,7 +97,7 @@
                                             <th class="border-top-0">No.</th>
                                             <th class="border-top-0">ID Transaksi</th>      
                                             <th class="border-top-0">Tanggal</th>      
-                                            <th class="border-top-0">Jenis Paket</th>
+                                            <th class="border-top-0">Mesin Cuci</th>
                                             <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
                                             <th class="border-top-0">Status</th>
@@ -125,27 +105,28 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                     <?php $data = []; $row=1; foreach($data as $transaksi_laundry): ?>
-
-                                    <?php 
-                                        $row=1; 
-                                        foreach($transaksi as $transaksi_laundry){ 
-                                    ?>
-
                                         <tr>
                                             <td><?= $row++;?></td>
                                             <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
                                             <td><?= $transaksi_laundry['waktu'] ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "Paket 1" : "Paket 2"; ?></td>
-                                            <td><?= ($transaksi_laundry['id_jenis_layanan']==1)? "1-2 Kg" : "3-5 Kg"; ?></td>
-                                            <td><?= number_format($transaksi_laundry['total_transaksi'],0,'.','.'); ?></td>
+                                            <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "Mesin 1" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 2) ? "Mesin 2" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 3) ? "Mesin 3" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 4) ? "Mesin 4" : "Mesin 5"))); ?>
+                                            </td>
+                                            <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "1-2 Kg" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 2) ? "3-4 Kg" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 3) ? "5-6 Kg" : 
+                                                    (($transaksi_laundry['id_mesin_cuci'] == 4) ? "7-8 Kg" : "9-10 Kg"))); ?>
+                                            </td>
+                                            <td><?= number_format($transaksi_laundry['total_transaksi'], 0, '.', '.'); ?></td>
                                             <td>Active</td>
                                         </tr>
 
-                                    <?php 
-                                        }
-                                ?>
+
+
+                                        <?php endforeach; ?>
  
                                     </tbody>
                                 </table>
@@ -153,9 +134,6 @@
                         </div>
                     </div>
                 </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
     </div>
     
     <!-- ============================================================== -->
