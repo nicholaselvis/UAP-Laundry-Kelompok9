@@ -24,11 +24,6 @@ class MesinMigration extends Migration
                 'constraint'        => 20,
                 'unsigned'          => true,
             ],
-            'id_transaksi' => [ // Added foreign key column
-                'type'              => 'INT',
-                'constraint'        => 20,
-                'unsigned'          => true,
-            ],
         ]);
 
         $this->forge->addKey('id_mesin_cuci', true); // Corrected primary key definition

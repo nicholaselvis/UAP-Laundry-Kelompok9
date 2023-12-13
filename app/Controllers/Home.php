@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index()
     {
         if(in_groups('admin'))return redirect()->to(base_url('admin'));
-        if(in_groups('customer'))return redirect()->to(base_url('customer'));
+        if(in_groups('customer'))return redirect()->to(base_url('dashboard_cust'));
         if(in_groups('kasir'))return redirect()->to(base_url('dashboard_kasir'));
         return view('auth/login',[
             'config' => config('Auth')

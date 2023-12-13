@@ -1968,7 +1968,7 @@ select.form-control:focus::-ms-value {
 
     .form-container-kasir {
       position: absolute;
-      top: 25%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: white;
@@ -2022,7 +2022,7 @@ select.form-control:focus::-ms-value {
 
 
 
-  .riwayat-absensi-kasir{
+  /* .riwayat-absensi-kasir{
     position: absolute;
       top: 50%;
       left: 50%;
@@ -2032,7 +2032,7 @@ select.form-control:focus::-ms-value {
       border-radius: 15px;
       padding: 15px;
       padding-bottom: 10px;
-  }
+  } */
 
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);

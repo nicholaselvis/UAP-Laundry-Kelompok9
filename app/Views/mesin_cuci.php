@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>" aria-expanded="false">
                             <i class="fa fa-globe" aria-hidden="true"></i>
                             <span class="hide-menu">Log Out</span>
                         </a>
@@ -79,16 +79,7 @@
 
     <div class="page-wrapper mt-5">
 
-        <div class="page-breadcrumb bg-white">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <h4 class="page-title">Detail Pesanan</h4>
-                    <input type="date" id="lname" name="tanggal"><br></td>
-                </div>
-                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                </div>
-            </div>
-        </div>
+        
         <div class="container-fluid" style="background-image: url('./assets/img/bg.png')">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
@@ -110,9 +101,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
                                 
-                                foreach ($mesin_cuci as $transaksi_laundry) { ?>
+                                <?php foreach ($mesin_cuci as $transaksi_laundry) { ?>
                                     <tr>
                                         <td>
                                             <?= $transaksi_laundry['id_transaksi']; ?>
@@ -121,7 +111,7 @@
                                             <?= $transaksi_laundry['tanggal_booking']; ?>
                                         </td>
                                         <td>
-                                            <?= $transaksi_laundry['id_mesin']; ?>
+                                            <?= $transaksi_laundry['id_mesin_cuci']; ?>
                                         </td>
                                         <td>
                                             <?= $transaksi_laundry['kapasitas_pesanan']; ?>

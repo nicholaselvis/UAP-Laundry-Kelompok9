@@ -55,12 +55,13 @@
                                 <span class="hide-menu">Riwayat Transaksi</span>
                             </a>
                         </li>
-                    <li class="sidebar-item pt-2">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
-                            <i class="fa fa-globe" aria-hidden="true"></i>
-                            <span class="hide-menu">Log Out</span>
-                        </a>
-                    </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
+                                aria-expanded="false">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <span class="hide-menu">LogOut</span>
+                            </a>
+                        </li>
                 </ul>
             </nav>
         </div>
@@ -77,49 +78,50 @@
         </div>
 
        <div class="form-container-kasir">
-        <form action="<?= base_url('/absensi/store') ?>" method="POST" class="needs-validation" novalidate>
-            <h4 class="text-center mb-4">Silahkan lakukan absensi!</h4>
+            <form action="<?= base_url('/absensi/store') ?>" method="POST" class="needs-validation" novalidate>
+                <h4 class="text-center mb-4">Silahkan lakukan absensi!</h4>
 
-            
-            <div class="form-group row">
-                <label for="nama" class="col-sm-2 col-form-label">Nama</label>
-                <div class="col-sm-10">
-                    <input type="text" id="nama" name="nama" class="form-control" required>
-                    <div class="invalid-feedback">Mohon isi nama.</div>
+                
+                <div class="form-group row">
+                    <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="nama" name="nama" class="form-control" required>
+                        <div class="invalid-feedback">Mohon isi nama.</div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
-                <div class="col-sm-10">
-                    <input type="date" id="date" name="date" class="form-control" required>
-                    <div class="invalid-feedback">Mohon pilih tanggal.</div>
+                <div class="form-group row">
+                    <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-sm-10">
+                        <input type="date" id="date" name="date" class="form-control" required>
+                        <div class="invalid-feedback">Mohon pilih tanggal.</div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="tanggal_booking" class="col-sm-2 col-form-label">Waktu</label>
-                <div class="col-sm-10">
-                    <input type="time" id="time" name="time" class="form-control" required>
-                    <div class="invalid-feedback">Mohon pilih waktu.</div>
+                <div class="form-group row">
+                    <label for="tanggal_booking" class="col-sm-2 col-form-label">Waktu</label>
+                    <div class="col-sm-10">
+                        <input type="time" id="time" name="time" class="form-control" required>
+                        <div class="invalid-feedback">Mohon pilih waktu.</div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="foto" class="col-sm-2 col-form-label">Bukti Kehadiran</label>
-                <div class="col-sm-10">
-                    <input type="file" name="bukti_absensi" class="form-control-file" required>
-                    <div class="invalid-feedback">Mohon unggah bukti kehadiran.</div>
+                <div class="form-group row">
+                    <label for="foto" class="col-sm-2 col-form-label">Bukti Kehadiran</label>
+                    <div class="col-sm-10">
+                        <input type="file" name="bukti_absensi" class="form-control-file" required>
+                        <div class="invalid-feedback">Mohon unggah bukti kehadiran.</div>
+                    </div>
                 </div>
-            </div>
 
-            
-            <button type="submit" class="btn btn-primary float-right">Kirim</button>
-        </form>
-        </form>
-    </div>
+                
+                <button type="submit" class="btn btn-primary float-right">Kirim</button>
+            </form>
+        
+ 
+    
 
-    <div class="riwayat-absensi-kasir">
+ 
         <h4 class="text-center mb-4">Lihat Riwayat Absensi Anda disini!</h4>
         
 

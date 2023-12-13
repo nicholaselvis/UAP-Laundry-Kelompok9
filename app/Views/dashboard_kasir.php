@@ -5,7 +5,7 @@
 <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
-<header class="topbar" data-navbarbg="skin5">
+    <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
                     <a class="navbar-brand" >
@@ -54,7 +54,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
                                 aria-expanded="false">
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                 <span class="hide-menu">Log Out</span>
@@ -77,64 +77,20 @@
         </div>
 
     <div class="container-fluid py-5" style="position:absolute;">
-        <div class="container py-5" style="margin-left:380px; margin-top:-65px">
-            <div class="row px-3" style="justify-content: center;">
-            <?php
-                foreach($mesin_cuci as $mesin){
-            ?>
+        <div class="container py-5" style="margin-left:300px; margin-top:-65px">
+            <div class="row px-3" style="justify-content: center; padding-top: 5%">
+                <?php foreach($mesin_cuci as $mesin): ?>
                     <div class="card" style="width: 18rem;">
                         <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                            <div class="card-paket1">
-                                <h5 style="font-weight: bolder;">MESIN CUCI <?= $mesin["id_mesin"]?></h5>
-                                <a href="<?=base_url('detail/mesin/' . $mesin['id_mesin'])?>"">Detail</a>
-                            </div>
+                        <div class="card-paket1">
+                            <h5 style="font-weight: bolder;">MESIN CUCI <?= $mesin["id_mesin"]?></h5>
+                            <a href="<?= base_url('detail/mesin/' . $mesin['id_mesin']) ?>">Detail</a>
+                        </div>
                     </div>
-                    <?php 
-                }
-                ?>
-                </div>
-                <!-- <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 1</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div>      
-                
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 2</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 3</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 4</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 5</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div> -->
+                    <?php endforeach; ?>
+            </div>
         </div>
-    </div>
+</div>
 
     <img src="<?= base_url("assets/img/bg.png")?>" alt="homepage" class="bg-overlay" />
 

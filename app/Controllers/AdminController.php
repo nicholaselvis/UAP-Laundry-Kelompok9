@@ -2,26 +2,32 @@
 
 namespace App\Controllers;
 
-use App\Models\StokModel;
+
 use App\Models\KasirModel;
+use App\Models\TransaksiModel;
+use App\Models\CustomerModel;
 use App\Controllers\BaseController;
 use CodeIgniter\Commands\Utilities\Publish;
 
 class AdminController extends BaseController
 {
-    public $stokModel;
-
+    
+    public $transaksiModel;
     protected $helpers=['Form'];
 
     public function __construct()
     {
-        $this->stokModel = new StokModel();
+        $this->transaksiModel = new TransaksiModel();
         $this->kasirModel = new KasirModel();
     }
 
     public function index()
     {
-        return view('dashboard_admin');
+        $transaksi = new TransaksiModel();
+        $data = $transaksi->getUserTransaksi(1);
+       
+
+        return view('dashboard_admin', ['data' => $data]);
     }
 
     //kasir
@@ -32,7 +38,7 @@ class AdminController extends BaseController
         $kasir = $kasirModel->getKasir();
 
         $data = [
-            'title' => 'Stok Barang',
+            'title' => 'Kasir',
             'kasir'  => $this->kasirModel->getKasir(),
         ];
 
@@ -108,99 +114,6 @@ class AdminController extends BaseController
             ->with('success', 'Berhasil menghapus data');
     }
 
-<<<<<<< HEAD
-=======
 
-
-
-
-
-    //stok
-    public function stok()
-    {
-        $stokModel = new StokModel();
-
-        $stok = $stokModel->getStok();
-
-        $data = [
-            'title' => 'Stok Barang',
-            'stok'  => $this->stokModel->getStok(),
-        ];
-
-
-        return view('stok', $data);
-    }
-
-    public function create_stok()
-    {
-        $stok = $this->stokModel->getStok();
-
-        $data =[
-            
-            'nama_barang'   => $this->request->getVar('nama_barang'),
-            'jumlah'        => $this->request->getVar('jumlah'),
-        ];
-
-        return view('tambah_stok', $data);
-    }
-
-    public function store()
-    {
-        
-    
-        $data = [
-            
-            'nama_barang' => $this->request->getVar('nama_barang'),
-            'jumlah' => $this->request->getVar('jumlah'),
-        ];
-    
-        $this->stokModel->saveStok($data);
-        return redirect()->to('/admin/stok');
-    }
-
-    public function edit_stok($id)
-    {
-        $stok = $this->stokModel->getStok($id);
-
-        $data = [
-            'title' => 'Edit Stok',
-            'stok' => $stok,
-        ];
-        //dd($this->request->getVar());
-
-        return view('edit_stok', $data);
-    }
-
-    public function updateStok($id)
-    {
-
-        $data = [  
-            'nama_barang' => $this->request->getVar('nama_barang'),
-            'jumlah' => $this->request->getVar('jumlah'),
-        ];
-
-        
-
-        $result = $this->stokModel->updateStok($data, $id);
-
-        if(!$result)
-        {
-            return redirect()->back()->withInput()
-                ->with('error', 'Gagal Menyimpan Data');
-        }
-
-        return redirect()->to(base_url('/admin/stok'));
-    }
-
-    public function destroyStok($id)
-    {
-        $result = $this->stokModel->deleteStok($id);
-        if(!$result){
-            return redirect()->back()->with('error', 'Gagal menghapus data');
-        }
-        return redirect()->to(base_url('/admin/stok'))
-            ->with('success', 'Berhasil menghapus data');
-    }
->>>>>>> dev
 }
 

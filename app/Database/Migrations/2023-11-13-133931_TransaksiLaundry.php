@@ -20,13 +20,12 @@ class TransaksiLaundry extends Migration
                 'constraint'        => 20,
                 'unsigned'          => true,
             ],
-<<<<<<< HEAD
+            'waktu' => [
+                'type'              => 'VARCHAR',
+                'constraint'        => 20,
+                'unsigned'          => true,
+            ],
             'id_mesin_cuci' => [
-=======
-
-            'id_mesin_cuci' => [
-
->>>>>>> dev
                 'type'              => 'INT',
                 'constraint'        => 20,
                 'unsigned'          => true,
@@ -38,6 +37,11 @@ class TransaksiLaundry extends Migration
             ],
             'total_transaksi' => [
                 'type'              => 'INT',
+                'constraint'        => 20,
+                'unsigned'          => true,
+            ],
+            'tanggal_booking' => [
+                'type'              => 'DATETIME',
                 'constraint'        => 20,
                 'unsigned'          => true,
             ],

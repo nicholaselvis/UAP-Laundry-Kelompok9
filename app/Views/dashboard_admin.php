@@ -161,45 +161,41 @@
                                 <h3 class="box-title mb-0">Histori Transaksi</h3>
                             </div>
                             <div class="table-responsive">
-                                <table class="table no-wrap">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-top-0">#</th>
-                                            <th class="border-top-0">Nama</th>
-                                            
-                                            <th class="border-top-0">Berat Cucian (Kg)</th>
-                                            <th class="border-top-0">Lainnya</th>
-                                            <th class="border-top-0">Harga</th>
-                                        </tr>
-                                    </thead>
+                            <table class="table no-wrap">
+                                <thead>
+                                    <tr>
+                                        <th class="border-top-0">No.</th>
+                                        <th class="border-top-0">Tanggal</th>
+                                        <th class="border-top-0">Waktu</th>
+                                        <th class="border-top-0">Mesin Cuci</th>
+                                        <th class="border-top-0">Kapasitas (kg)</th>
+                                        <th class="border-top-0">Harga</th>
+                                        <th class="border-top-0">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php $row = 1; foreach ($data as $transaksi_laundry): ?>
+                                    <tr>
+                                        <td><?= $row++;?></td>
+                                        <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
+                                        <td><?= $transaksi_laundry['waktu'] ?></td>
+                                        <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "Mesin 1" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 2) ? "Mesin 2" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 3) ? "Mesin 3" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 4) ? "Mesin 4" : "Mesin 5"))); ?>
+                                        </td>
+                                        <td><?= ($transaksi_laundry['id_mesin_cuci'] == 1) ? "1-2 Kg" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 2) ? "3-4 Kg" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 3) ? "5-6 Kg" : 
+                                                (($transaksi_laundry['id_mesin_cuci'] == 4) ? "7-8 Kg" : "9-10 Kg"))); ?>
+                                        </td>
+                                        <td><?= number_format($transaksi_laundry['total_transaksi'], 0, '.', '.'); ?></td>
+                                        <td>Active</td>
+                                    </tr>
+                                <?php endforeach; ?>
 
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo">Estes</td>
-                                            
-                                            <td class="txt-oflo">3 </td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-success">36.000</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Layla</td>
-                                            
-                                            <td class="txt-oflo">4,5</td>
-                                            <td class="txt-oflo">- </td>
-                                            <td><span class="text-info">45.000</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Rafaela</td>
-                                            <td class="txt-oflo">2</td>
-                                            <td class="txt-oflo">Detergen </td>
-                                            <td><span class="text-info">32.000</span></td>
-                                        </tr>
-                                    </tbody>
-
-                                </table>
+                                </tbody>
+                            </table>
                             </div>
                         </div>
                     </div>

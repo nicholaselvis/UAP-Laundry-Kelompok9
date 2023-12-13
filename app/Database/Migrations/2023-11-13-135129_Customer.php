@@ -24,9 +24,7 @@ class Customer extends Migration
                 'constraint'        => 20,
                 'unsigned'          => true,
             ],
-            'tanggal_booking' => [
-                'type'              => 'DATE',
-            ],
+            
         ]);
 
         $this->forge->addKey('id_customer', true);
