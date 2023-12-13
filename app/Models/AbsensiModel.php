@@ -12,7 +12,10 @@ class AbsensiModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
+
     protected $allowedFields    = ['nama', 'tanggal', 'foto'];
+
+    protected $allowedFields    = ['nama', 'date', 'foto', 'time',	'bukti_absensi'	];
 
     // Dates
     protected $useTimestamps = true;

@@ -4,18 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CustomerModel extends Model
+class StokModel extends Model
 {
-    protected $table            = 'customer';
-    protected $primaryKey       = 'id_customer';
+    protected $table            = 'stok';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_customer', 'no_wa'];
+    protected $allowedFields    = ['id', 'nama_barang', 'jumlah'];
 
     // Dates
-
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
@@ -27,7 +26,7 @@ class CustomerModel extends Model
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
-
+ 
     // Callbacks
     protected $allowCallbacks = true;
     protected $beforeInsert   = [];
@@ -39,31 +38,23 @@ class CustomerModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getAllCustomers()
-    {
-        return $this->findAll();
-    }
-
-    public function createCustomer($data)
-    {
+    public function saveStok($data){
         $this->insert($data);
     }
 
-    public function getCustomer($id = null)
+    public function getStok($id = null)
     {
         if ($id != null) {
-            return $this->find($id);
+            return $this->select(['id', 'nama_barang', 'jumlah'])->find($id);
         }
-        return $this->findAll();
+        return $this->select(['id', 'nama_barang', 'jumlah'])->findAll();
     }
 
-    public function updateCustomer($data, $id)
-    {
+    public function updateStok($data, $id){
         return $this->update($id, $data);
     }
 
-    public function deleteCustomer($id)
-    {
+    public function deleteStok($id){
         return $this->delete($id);
     }
 }

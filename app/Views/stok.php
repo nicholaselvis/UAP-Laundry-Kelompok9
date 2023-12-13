@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/app') ?>
 
 <?= $this->section('content') ?>
+<?php $id = 1; ?>
 
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
@@ -73,21 +74,21 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('dashboard_admin')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin')?>"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('kasir')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin/kasir')?>"
                                 aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Kasir</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('stok')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('admin/stok')?>"
                                 aria-expanded="false">
                                 <i class="fa fa-font" aria-hidden="true"></i>
                                 <span class="hide-menu">Stok</span>
@@ -147,38 +148,37 @@
                                 <table class="table no-wrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">ID</th>
                                             <th class="border-top-0">Barang</th>
                                             <th class="border-top-0">Stok</th>
                                             <th class="border-top-0">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                        foreach ($stok as $stok){
+                                    ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo">Sabun</td>
-                                            <td class="txt-oflo">10</td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
+                                            <td><?= $id++ ?></td>
+                                            <td class="txt-oflo"><?= $stok['nama_barang'] ?></td>
+                                            <td class="txt-oflo"><?= $stok['jumlah'] ?></td>
+                                            <td><a href="<?= base_url('/admin/' . $stok['id'] . '/edit_stok') ?>" class="tomboledit">Edit</a>
+                                            <form action="<?= base_url('/admin/'. $stok['id'].'/apus_stok') ?>" method="post" style="display:inline-block">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <?= csrf_field() ?>
+                                                <button type="submit" class="tombolapus">Hapus</button>
+                                            </form>
+                                            
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Pewangi</td>
-                                            <td class="txt-oflo">6</td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Apa</td>
-                                            <td class="txt-oflo">??</td>
-                                            <td><button type="submit" class="tomboledit">Edit</button>
-                                            <button type="submit" class="tombolapus">Hapus</button></td>
-                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                     </tbody>
 
                                 </table>
+                                <a href="<?= base_url('/admin/create_stok')?>">
                                 <button type="submit" class="tombol">Tambah</button>
+                                </a>
                             </div>
                         </div>
                     </div>
