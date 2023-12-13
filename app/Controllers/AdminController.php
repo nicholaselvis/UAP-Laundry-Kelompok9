@@ -2,20 +2,20 @@
 
 namespace App\Controllers;
 
-use App\Models\StokModel;
+
 use App\Models\KasirModel;
 use App\Controllers\BaseController;
 use CodeIgniter\Commands\Utilities\Publish;
 
 class AdminController extends BaseController
 {
-    public $stokModel;
+    
 
     protected $helpers=['Form'];
 
     public function __construct()
     {
-        $this->stokModel = new StokModel();
+        
         $this->kasirModel = new KasirModel();
     }
 
@@ -24,16 +24,7 @@ class AdminController extends BaseController
         return view('dashboard_admin');
     }
 
-
     //kasir
-
-
-    public function stok()
-    {
-        return view('stok');
-    }
-
-
     public function kasir()
     {
         $kasirModel = new KasirModel();
@@ -41,7 +32,7 @@ class AdminController extends BaseController
         $kasir = $kasirModel->getKasir();
 
         $data = [
-            'title' => 'Stok Barang',
+            'title' => 'Kasir',
             'kasir'  => $this->kasirModel->getKasir(),
         ];
 

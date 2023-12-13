@@ -41,4 +41,6 @@ class CreateDaftarKasirTable extends Migration
     {
         $this->forge->dropTable('daftar_kasir', true);
     }
+
 }
+

@@ -15,7 +15,6 @@ class CustomerModel extends Model
     protected $allowedFields    = ['nama_customer', 'no_wa'];
 
     // Dates
-
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';

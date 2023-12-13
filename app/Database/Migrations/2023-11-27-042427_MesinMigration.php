@@ -4,18 +4,18 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class JenisLayanan extends Migration
+class MesinMigration extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_mesin_cuci' => [
+            'id_mesin' => [
                 'type'              => 'INT',
                 'constraint'        => 20,
                 'unsigned'          => true,
                 'auto_increment'    => true,
             ],
-            'nama_mesin' => [
+            'no_mesin' => [
                 'type'              => 'VARCHAR',
                 'constraint'        => 50,
             ],
@@ -24,9 +24,18 @@ class JenisLayanan extends Migration
                 'constraint'        => 20,
                 'unsigned'          => true,
             ],
+            'id_transaksi' => [ // Added foreign key column
+                'type'              => 'INT',
+                'constraint'        => 20,
+                'unsigned'          => true,
+            ],
         ]);
 
-        $this->forge->addKey('id_mesin_cuci', true); // Corrected primary key definition
+        $this->forge->addKey('id_mesin', true);
+        
+        // Added foreign key
+        $this->forge->addForeignKey('id_transaksi', 'transaksi_laundry', 'id_transaksi', 'CASCADE', 'CASCADE');
+        
         $this->forge->createTable('mesin_cuci');
     }
 

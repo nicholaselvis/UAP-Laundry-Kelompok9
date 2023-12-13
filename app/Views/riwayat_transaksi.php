@@ -103,10 +103,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php 
-                                        $row=1; 
-                                        foreach($transaksi as $transaksi_laundry){ 
-                                    ?>
+                                    <?php $data = []; $row=1; foreach($data as $transaksi_laundry): ?>
                                         <tr>
                                             <td><?= $row++;?></td>
                                             <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
@@ -124,13 +121,7 @@
                                             <td><?= number_format($transaksi_laundry['total_transaksi'], 0, '.', '.'); ?></td>
                                             <td>Active</td>
                                         </tr>
-
                                     <?php endforeach; ?>
-
-                                    <?php 
-                                        }
-                                ?>
- 
                                     </tbody>
                                 </table>
                             </div>
@@ -162,4 +153,4 @@
     <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="js/pages/dashboards/dashboard1.js"></script>
 
-    <?= $this->endsection() ?>
+<?= $this->endsection() ?>

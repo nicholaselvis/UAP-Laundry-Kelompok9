@@ -34,3 +34,6 @@ class RiwayatController extends BaseController
        
 }
 
+}
+       
+
