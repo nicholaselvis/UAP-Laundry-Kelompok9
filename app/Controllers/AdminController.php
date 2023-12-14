@@ -24,10 +24,16 @@ class AdminController extends BaseController
     public function index()
     {
         $transaksi = new TransaksiModel();
-        $data = $transaksi->getUserTransaksi(1);
-       
+        $jumlahkasir = $this->kasirModel->get()->getNumRows(); // Corrected line
+        $jumlahtransaksi = $this->transaksiModel->get()->getNumRows(); // Corrected line
 
-        return view('dashboard_admin', ['data' => $data]);
+        $data = [ 
+            'jumlahkasir' => $jumlahkasir,
+            'jumlahtransaksi' => $jumlahtransaksi,
+            'data'        => $transaksi->getUserTransaksi(1)
+        ];
+
+        return view('dashboard_admin', $data);
     }
 
     //kasir

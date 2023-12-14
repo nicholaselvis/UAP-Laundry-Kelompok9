@@ -136,7 +136,7 @@
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Karyawan</h3>
                             <ul class="list-inline two-part d-flex align-items-center mb-0"> 
-                                <span class="counter text-success">3</span>
+                            <span class="counter text-success"><?= $jumlahkasir ?></span>
                             </ul>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Total Transaksi</h3>
                             <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <span class="counter text-purple">50</span>
+                                <span class="counter text-purple"><?= $jumlahtransaksi ?></span>
                             </ul>
                         </div>
                     </div>
