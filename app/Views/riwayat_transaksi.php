@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/app') ?>
 
 <?= $this->section('content') ?>
+
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         <header class="topbar" data-navbarbg="skin5">
@@ -8,7 +9,8 @@
                 <div class="navbar-header" data-logobg="skin6">
                     <a class="navbar-brand" >
                         <b class="logo-icon">
-                            <img src="<?= base_url("assets/img/logonew.png")?>" alt="homepage" style="height:50px;/>
+                        <img src="<?= base_url("assets/img/logonew.png")?>" alt="homepage" style="height:50px;"/>
+
                         </b>
 
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
@@ -52,7 +54,7 @@
                         </li>
                         
                         <li class="sidebar-item pt-2">
-                            <a href="<?=base_url('/riwayat_transaksi')?>" class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
+                            <a href="<?=base_url('/riwayat_transaksi')?>" class="sidebar-link waves-effect waves-dark sidebar-link" 
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat Transaksi</span>
@@ -157,4 +159,4 @@
     <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="js/pages/dashboards/dashboard1.js"></script>
 
-<?= $this->endsection() ?>
+    <?= $this->endsection() ?>
