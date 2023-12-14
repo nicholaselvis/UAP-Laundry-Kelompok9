@@ -114,6 +114,5 @@ class AdminController extends BaseController
             ->with('success', 'Berhasil menghapus data');
     }
 
-
 }
 

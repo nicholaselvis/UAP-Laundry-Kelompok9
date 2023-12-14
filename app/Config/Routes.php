@@ -18,7 +18,6 @@ $routes->get('/', 'Home::index');
 $routes->get('/redirect', 'Home::redirect');
 
 $routes->get('/register', 'Home::register');
-
 $routes -> get('/dashboard_admin', [AdminController::class, 'index']);
 $routes -> get('/stok', [AdminController::class, 'stok']);
 $routes -> get('/kasir', [AdminController::class, 'kasir']);
@@ -29,7 +28,6 @@ $routes -> get('/admin/stok', [AdminController::class, 'stok']);
 $routes -> get('/admin/kasir', [AdminController::class, 'kasir']);
 $routes -> get('/admin/create_kasir', [AdminController::class, 'create_kasir']);
 $routes -> post('/admin/kasirstore', [AdminController::class, 'kasirstore']);
-
 
 $routes -> get('/admin', [AdminController::class, 'index'], ['filter' => 'role:admin']);
 $routes -> get('/admin/stok', [AdminController::class, 'stok'], ['filter' => 'role:admin']);
@@ -46,13 +44,11 @@ $routes -> get('/dashboard_kasir', [KasirController::class, 'index'], ['filter' 
 $routes -> get('/absensi_kasir', [AbsensiController::class, 'show'], ['filter' => 'role:kasir']);
 $routes -> get('/riwayat_transaksi', [RiwayatController::class, 'index'], ['filter' => 'role:kasir']);
 
-
 $routes -> get('/dashboard_kasir', [KasirController::class, 'index']);
 $routes -> get('/absensi_kasir', [AbsensiController::class, 'show']);
 
 $routes -> get('/riwayat_transaksi', [RiwayatController::class, 'index']);
 $routes -> post('/riwayat_transaksi', [RiwayatController::class, 'index']);
-
 
 $routes -> post('/absensi/store', [AbsensiController::class, 'store'], ['filter' => 'role:kasir']);
 // $routes->get('/dashboard_kasir', [AbsensiController::class, 'dashboard_kasir']);

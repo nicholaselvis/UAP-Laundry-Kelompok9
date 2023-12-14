@@ -12,7 +12,7 @@ class KasirModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'nama', 'umur', 'jeniskelamin'];
+     protected $allowedFields    = ['id', 'nama', 'umur', 'jeniskelamin'];
 
     // Dates
     protected $useTimestamps = false;
