@@ -50,9 +50,6 @@ $routes -> get('/riwayat_transaksi', [RiwayatController::class, 'index'], ['filt
 $routes -> get('/dashboard_kasir', [KasirController::class, 'index']);
 $routes -> get('/absensi_kasir', [AbsensiController::class, 'show']);
 
-$routes -> get('/riwayat_transaksi', [RiwayatController::class, 'index']);
-$routes -> post('/riwayat_transaksi', [RiwayatController::class, 'index']);
-
 
 $routes -> post('/absensi/store', [AbsensiController::class, 'store'], ['filter' => 'role:kasir']);
 // $routes->get('/dashboard_kasir', [AbsensiController::class, 'dashboard_kasir']);

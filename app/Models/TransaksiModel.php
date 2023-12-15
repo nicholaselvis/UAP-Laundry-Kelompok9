@@ -52,9 +52,13 @@ class TransaksiModel extends Model
         return $this->select('transaksi_laundry.*')->findAll();
     }
 
-    public function getUserTransaksi(){
+    public function getUserTransaksi($id){
         // return $this->where('id_customer', $id)->findAll();
-        return $this->select('transaksi_laundry.*, customer.id_customer')->join('customer', 'customer.id_customer = transaksi_laundry.id_customer')->findAll();
+        return $this->select('transaksi_laundry.*, customer.nama_customer')
+        ->join('customer', 'customer.id_customer = transaksi_laundry.id_customer')
+        // ->join('mesin_cuci', 'mesin_cuci.id_mesin = transaksi_laundry.id_mesin_cuci')
+        ->where('id_mesin_cuci', $id)
+        ->findAll();
 
     }
     public function getTransaksiByTanggal($tanggal){

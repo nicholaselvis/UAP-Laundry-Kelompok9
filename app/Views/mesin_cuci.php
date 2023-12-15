@@ -2,7 +2,6 @@
 
 <?= $this->section('content') ?>
 
-
 <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
     data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
@@ -89,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid" style="background-image: url('./assets/img/bg.png')">
+        <div class="container-fluid for-bg">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
                     <div class="d-md-flex mb-3">
@@ -101,6 +100,7 @@
                                 <tr>
                                     <!-- <th class="border-top-0">No.</th> -->
                                     <th class="border-top-0">ID Transaksi</th>
+                                    <th class="border-top-0">Nama Customer</th>
                                     <th class="border-top-0">Tanggal</th>
                                     <th class="border-top-0">No. Mesin</th>
                                     <th class="border-top-0">Kapasitas (Kg)</th>
@@ -118,10 +118,13 @@
                                             <?= $transaksi_laundry['id_transaksi']; ?>
                                         </td>
                                         <td>
+                                            <?= $transaksi_laundry['nama_customer']; ?>
+                                        </td>
+                                        <td>
                                             <?= $transaksi_laundry['tanggal_booking']; ?>
                                         </td>
                                         <td>
-                                            <?= $transaksi_laundry['id_mesin']; ?>
+                                            <?= $transaksi_laundry['id_mesin_cuci']; ?>
                                         </td>
                                         <td>
                                             <?= $transaksi_laundry['kapasitas_pesanan']; ?>

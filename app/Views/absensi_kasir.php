@@ -67,7 +67,7 @@
     </aside>
 
     <div class="page-wrapper">
-        <div class="page-breadcrumb bg-white">
+        <div class="page-breadcrumb bg-white ">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <h4 class="page-title">Absensi Kasir</h4>
@@ -76,9 +76,9 @@
             </div>
         </div>
 
-       <div class="form-container-kasir">
+       <div class="form-container-kasir container">
         <form action="<?= base_url('/absensi/store') ?>" method="POST" class="needs-validation" novalidate>
-            <h4 class="text-center mb-4">Silahkan lakukan absensi!</h4>
+            <h4 class="text-center mb-4 mt-5">Silahkan lakukan absensi!</h4>
 
             
             <div class="form-group row">

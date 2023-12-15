@@ -93,46 +93,6 @@
                 }
                 ?>
                 </div>
-                <!-- <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 1</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div>      
-                
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 2</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 3</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 4</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= base_url("assets/img/paket2.png")?>" alt="Card image cap"/>
-                        <div class="card-paket1">
-                            <h5 style="font-weight: bolder;">MESIN CUCI 5</h5>
-                            <a class="detail" href="<?=base_url('/detail/mesin/(:any)')?>">DETAIL</a>
-                        </div>
-                </div> -->
         </div>
     </div>
 

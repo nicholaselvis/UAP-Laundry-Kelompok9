@@ -105,7 +105,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $data = []; $row=1; foreach($data as $transaksi_laundry): ?>
+                                    <?php $data = []; $row=1; foreach($transaksi as $transaksi_laundry): ?>
                                         <tr>
                                             <td><?= $row++;?></td>
                                             <td><?= $transaksi_laundry['tanggal_booking'] ?></td>
