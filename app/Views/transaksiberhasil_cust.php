@@ -1,56 +1,57 @@
 <?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
-<header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header" data-logobg="skin6">
-                    <a class="navbar-brand" >
-                        <b class="logo-icon">
-                            <img src="<?= base_url("assets/img/logonew.png")?>" alt="Card image cap" style="height:50px";/>
-                        </b>
-                        
-                    </a>
-                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
-                        ></a>
-                </div>
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <ul class="navbar-nav ms-auto d-flex align-items-center">                        
-                        <li>
-                            <div class="container" href="#">
-                                <img src="<?= base_url("assets/img/profile.png")?>" alt="" style="width:40px;height:40px;"/>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
 
-        <!-- Sidebar -->
-        <aside class="left-sidebar" data-sidebarbg="skin6">
-            <div class="scroll-sidebar">
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav" >
-                        <li class="sidebar-item pt-2" >
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_cust')?>">
-                                <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                <span class="hide-menu">Riwayat</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                <span class="hide-menu">LogOut</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+<header class="topbar" data-navbarbg="skin5">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <div class="navbar-header" data-logobg="skin6">
+                <a class="navbar-brand" >
+                    <b class="logo-icon">
+                        <img src="assets/img/logonew.png" style="height:50px";/>
+                    </b>
+                    
+                </a>
+                <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                ></a>
             </div>
-        </aside>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">                        
+                    <li>
+                        <div class="container" href="#">
+                            <img src="assets/img/profile.png" alt="" style="width:40px;height:40px;"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+</header>
+
+<!-- Sidebar -->
+<aside class="left-sidebar" data-sidebarbg="skin6">
+    <div class="scroll-sidebar">
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav" >
+                <li class="sidebar-item pt-2" >
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/dashboard_cust')?>">
+                        <i class="fa fa-table" aria-hidden="true"></i>
+                        <span class="hide-menu">Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
+                        <i class="far fa-clock" aria-hidden="true"></i>
+                        <span class="hide-menu">Riwayat</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"aria-expanded="false">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <span class="hide-menu">LogOut</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>
 
         <div class="row" 
         style="position:absolute; 

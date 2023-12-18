@@ -23,8 +23,7 @@
                 </ul>
             </div>
         </nav>
-
-    </header>
+</header>
 
 <!-- Sidebar -->
 <aside class="left-sidebar" data-sidebarbg="skin6">
@@ -41,6 +40,13 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('/riwayat_cust')?>">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Riwayat</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"
+                                aria-expanded="false">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <span class="hide-menu">LogOut</span>
                             </a>
                         </li>
                     </ul>

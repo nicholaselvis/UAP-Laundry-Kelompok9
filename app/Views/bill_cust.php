@@ -1,27 +1,28 @@
-
 <?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
 
 <header class="topbar" data-navbarbg="skin5">
-    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-        <div class="navbar-header" data-logobg="skin6">
-            <a class="navbar-brand" >
-                <b class="logo-icon">
-                    <img src="assets/img/logonew.png"Card image cap" style="height:50px";/>
-                </b>      
-            </a>
-            <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"></a>
-        </div>
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-            <ul class="navbar-nav ms-auto d-flex align-items-center">                        
-                <li>
-                    <div class="container" href="#">
-                        <img src="assets/img/profile.png" alt="" style="width:40px;height:40px;"/>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <div class="navbar-header" data-logobg="skin6">
+                <a class="navbar-brand" >
+                    <b class="logo-icon">
+                        <img src="assets/img/logonew.png" style="height:50px";/>
+                    </b>
+                    
+                </a>
+                <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                ></a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">                        
+                    <li>
+                        <div class="container" href="#">
+                            <img src="assets/img/profile.png" alt="" style="width:40px;height:40px;"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 </header>
 
 <!-- Sidebar -->
@@ -41,6 +42,12 @@
                         <span class="hide-menu">Riwayat</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('logout'); ?>"aria-expanded="false">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <span class="hide-menu">LogOut</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -55,12 +62,6 @@
             <label for="nama" class="col-sm-3 col-form-label">Nama</label>
             <div class="col-sm-8">
                 <input type="text" readonly class="form-control" id="nama" value="<?=$data['nama_customer'];?>">
-            </div>
-        </div>
-        <div class="mb-3 row">
-            <label for="no_wa" class="col-sm-3 col-form-label">No WA</label>
-            <div class="col-sm-8">
-                <input type="text" readonly class="form-control" id="no_wa" value="<?=$data['no_wa'];?>">
             </div>
         </div>
         <div class="mb-3 row">

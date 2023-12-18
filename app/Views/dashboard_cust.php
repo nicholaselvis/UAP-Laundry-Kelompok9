@@ -1,27 +1,29 @@
 <?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
+
 <header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header" data-logobg="skin6">
-                    <a class="navbar-brand" >
-                        <b class="logo-icon">
-                            <img src="<?= base_url("assets/css/img/logonew.png")?>"style="height:50px";/>
-                        </b>
-                    </a>
-                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
-                        ></a>
-                </div>
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <ul class="navbar-nav ms-auto d-flex align-items-center">                        
-                        <li>
-                            <div class="container" href="#">
-                                <img src="<?= base_url("assets/img/profile.png")?>" alt="" style="width:40px;height:40px;"/>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <div class="navbar-header" data-logobg="skin6">
+                <a class="navbar-brand" >
+                    <b class="logo-icon">
+                        <img src="assets/img/logonew.png" style="height:50px";/>
+                    </b>
+                    
+                </a>
+                <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                ></a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">                        
+                    <li>
+                        <div class="container" href="#">
+                            <img src="assets/img/profile.png" alt="" style="width:40px;height:40px;"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+</header>
 
         <!-- Sidebar -->
         <aside class="left-sidebar" data-sidebarbg="skin6">
@@ -69,8 +71,6 @@
                                 </a>
                             </div>
                         </div>
-                        
-
                 </div>
         </div>
     </div>

@@ -8,6 +8,7 @@
                     <b class="logo-icon">
                         <img src="assets/img/logonew.png" style="height:50px";/>
                     </b>
+                    
                 </a>
                 <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
                 ></a>
@@ -22,7 +23,7 @@
                 </ul>
             </div>
         </nav>
-    </header>
+</header>
 
 <!-- Sidebar -->
 <aside class="left-sidebar" data-sidebarbg="skin6">
@@ -48,7 +49,6 @@
                                 <span class="hide-menu">LogOut</span>
                             </a>
                         </li>
-                        
                     </ul>
                 </nav>
             </div>
