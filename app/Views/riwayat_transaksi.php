@@ -95,8 +95,8 @@
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">No.</th>
-                                            <th class="border-top-0">ID Transaksi</th>      
                                             <th class="border-top-0">Tanggal</th>      
+                                            <th class="border-top-0">Waktu Booking</th>
                                             <th class="border-top-0">Mesin Cuci</th>
                                             <th class="border-top-0">Kapasitas (Kg)</th>
                                             <th class="border-top-0">Harga</th>
